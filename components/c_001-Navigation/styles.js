@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     left: "0",
     zIndex: 1300,
     width: "100vw",
-    // boxShadow: 'none'
+    boxShadow: 'none'
   },
   toolbar: {
     flexWrap: "wrap",
@@ -17,6 +17,8 @@ export default makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    // TODO: ADJUST HEIGHT
+    height: 100,
     [theme.breakpoints.up("md")]: {
       paddingLeft: 100,
       paddingRight: 100,
