@@ -3,18 +3,16 @@ import styles from "../styles/Home.module.css";
 
 const HomePage = () => {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Head>
         <title>Nativo 27</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Nativo 27</a>
-        </h1>
-      </main>
-    </div>
+      <section className={styles.imageContainer}>
+        <img className={styles.bgImg} src="/photos/2020_Blizzconline_Zoom_background_OW02.jpeg?lqip" />   {/* <-- SVG trace */}
+      </section>
+    </main>
   );
 };
 
