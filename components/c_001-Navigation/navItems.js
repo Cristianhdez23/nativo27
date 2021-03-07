@@ -1,4 +1,4 @@
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   {
     id: "nativo27",
     title: "Nativo/27",
@@ -32,7 +32,3 @@ const NAV_ITEMS = [
     slug: "/contacto",
   },
 ];
-
-export function getAllNavItems() {
-  return NAV_ITEMS;
-}

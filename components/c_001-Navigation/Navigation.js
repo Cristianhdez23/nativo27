@@ -13,7 +13,7 @@ import {
 } from "@material-ui/core";
 import { Close as CloseIcon, Menu as MenuIcon } from "@material-ui/icons";
 import { SITE_TITLE } from "../../constants/constants";
-import { getAllNavItems } from "./navItems";
+import { NAV_ITEMS } from "./navItems";
 import ActiveLink from "./ActiveLink";
 import useStyles from "./styles";
 
@@ -28,7 +28,7 @@ const Navigation = () => {
     setOpen(false);
   };
 
-  const navMenuList = getAllNavItems().map(({ id, slug, title }) => {
+  const navMenuList = NAV_ITEMS.map(({ id, slug, title }) => {
     return (
       <ActiveLink key={id} href={slug} activeClassName={classes.activeLink}>
         <a className={`${classes.drawerLink}`}>
@@ -56,7 +56,21 @@ const Navigation = () => {
               <Grid item xs={9} className={classes.desktopNavBlock}>
                 <nav className={classes.desktopNav}>
                   <List className={classes.desktopNavItemsList}>
-                    {navMenuList}
+                    {NAV_ITEMS.map(({ id, slug, title }) => {
+                      return (
+                        <ActiveLink
+                          key={id}
+                          href={slug}
+                          activeClassName={classes.activeLink}
+                        >
+                          <a className={`${classes.drawerLink}`}>
+                            <Typography variant="body2" component="span">
+                              {title}
+                            </Typography>
+                          </a>
+                        </ActiveLink>
+                      );
+                    })}
                   </List>
                 </nav>
               </Grid>

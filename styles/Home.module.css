@@ -115,6 +115,13 @@
   height: 1em;
 }
 
+.imgctn {
+  border: 1px solid red;
+  height: 600px;
+  width: 600px;
+  position: relative;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
