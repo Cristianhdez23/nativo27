@@ -1,11 +1,17 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(128, 128, 128, 0.5);
+}
+
+.imageContainer {
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 .main {
