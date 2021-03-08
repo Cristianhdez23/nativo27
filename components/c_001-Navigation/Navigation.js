@@ -56,21 +56,7 @@ const Navigation = () => {
               <Grid item xs={9} className={classes.desktopNavBlock}>
                 <nav className={classes.desktopNav}>
                   <List className={classes.desktopNavItemsList}>
-                    {NAV_ITEMS.map(({ id, slug, title }) => {
-                      return (
-                        <ActiveLink
-                          key={id}
-                          href={slug}
-                          activeClassName={classes.activeLink}
-                        >
-                          <a className={`${classes.drawerLink}`}>
-                            <Typography variant="body2" component="span">
-                              {title}
-                            </Typography>
-                          </a>
-                        </ActiveLink>
-                      );
-                    })}
+                    {navMenuList}
                   </List>
                 </nav>
               </Grid>

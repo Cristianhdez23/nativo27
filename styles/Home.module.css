@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: #fffcf3;
 }
 
 .imageContainer {
@@ -12,12 +12,6 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-}
-
-.bgImg {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 .main {

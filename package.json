@@ -12,15 +12,12 @@
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
-    "image-trace-loader": "^1.0.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
-    "lqip-loader": "^2.2.1",
     "material-ui-image": "^3.3.1",
     "next": "10.0.8",
-    "next-optimized-images": "^2.6.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-material-ui-carousel": "^2.2.1",
+    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views-utils": "^0.14.0-alpha.0"
   }
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Image from "material-ui-image";
+import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
+import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
 import styles from "../../styles/Home.module.css";
 
 const Naturaleza = () => {
@@ -10,15 +11,12 @@ const Naturaleza = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.imageContainer}>
-        <Image
-          src="/photos/2020_Blizzconline_Zoom_background_OW02.jpeg"
-          animationDuration={1000}
-          disableSpinner
-          cover
-          style={{paddingTop: '0', height: '100%', width: '100%'}}
-        />
-      </section>
+      <ImageBanner
+        srcImage="/photos/2020_Blizzconline_Zoom_background_OW02.jpeg"
+        title="Contacto con la naturaleza"
+      />
+
+      <CarouselSection />
     </main>
   );
 };

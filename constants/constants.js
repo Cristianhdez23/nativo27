@@ -1,33 +1,22 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import { createMuiTheme } from "@material-ui/core/styles";
 
-export const SITE_TITLE = 'Nativo 27';
+export const SITE_TITLE = "Nativo 27";
 
-const BLACK = '#000000';
-const ROYAL = '#0a2783';
-const GREYBLUE = '#63afaf';
-const DUCK_EGG_BLUE = '#e7f1fc';
-const BROWNISH_GREY = '#5c5c5c';
-const WARM_GREY = '#4a4a4a';
-const GRAY = '#979797';
-const LIGHT_GREY = '#1f0e5c';
-const LIGHT_GREY_2 = '#d6d6d6';
-const TRANSPARENT_GREY = 'rgba(10, 39, 131, 0.25)';
-const WHITE = '#ffffff';
-const LIGHT_GREY_3 = '#b3bfd9';
+const BLACK = "#000000";
+const WHITE = "#ffffff";
+const TRANSPARENT = "transparent";
 
-export const PRIMARY_COLOR = ROYAL;
-export const SECONDARY_COLOR = GREYBLUE;
-export const TEXT_DARK = BROWNISH_GREY;
-export const TEXT_DEFAULT = WARM_GREY;
-export const TEXT_LIGHT = LIGHT_GREY;
-export const TEXT_CAPTION = TRANSPARENT_GREY;
-export const BORDER_LIGHT_GRAY = LIGHT_GREY_2;
-export const BORDER_GRAY = GRAY;
-export const TRANSPARENT = 'transparent';
-export const TRANSPARENT_BLACK = 'rgba(0, 0, 0, 0.1)';
-export const TRANSPARENT_BLACK_2 = 'rgba(0, 0, 0, 0.73)';
-export const TRANSPARENT_BLACK_3 = 'rgba(0, 0, 0, 0.5)';
+const MAIN_GREEN_DARK = "#304e43";
+const MAIN_GREEN_DARK_TWO = "#337b5a";
+const MAIN_GREEN_DARK_THREE = "#2f5f32";
+
+const SECONDARY_GREEN_LIGHT = "#528160";
+const SECONDARY_GREEN_LIGHT_TWO = "#a1b192";
+
+const MAIN_YELLOW = "#ddc26c";
+
+const MAIN_GRAY = "#919191";
+const MAIN_GRAY_TWO = "#8e8e8e";
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 
@@ -35,59 +24,75 @@ export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: PRIMARY_COLOR,
-      main: PRIMARY_COLOR,
-      dark: PRIMARY_COLOR,
-      disabled: TRANSPARENT_BLACK,
-      contrastText: WHITE,
+      main: MAIN_GREEN_DARK,
+      light: SECONDARY_GREEN_LIGHT,
+      dark: MAIN_GREEN_DARK_TWO,
+      disabled: TRANSPARENT,
+      contrastText: MAIN_GRAY_TWO,
       white: WHITE,
       black: BLACK,
-      gray: GRAY,
+      gray: MAIN_GRAY,
       transparent: TRANSPARENT,
     },
     secondary: {
-      light: SECONDARY_COLOR,
-      main: SECONDARY_COLOR,
-      dark: LIGHT_GREY,
-      contrastText: WHITE,
+      main: SECONDARY_GREEN_LIGHT,
+      light: SECONDARY_GREEN_LIGHT_TWO,
+      dark: MAIN_GRAY_TWO,
+      contrastText: MAIN_YELLOW,
     },
     text: {
-      main: TEXT_DEFAULT,
-      secondary: TEXT_DARK,
-      light: TEXT_LIGHT
+      main: WHITE,
+      secondary: MAIN_GRAY,
+      light: MAIN_GREEN_DARK,
     },
     background: {
-      main: WHITE,
-      default: WHITE,
-      card: LIGHT_GREY_3,
-      lightBlue: DUCK_EGG_BLUE,
-      borderColor: BORDER_GRAY
+      main: MAIN_GREEN_DARK,
+      default: MAIN_GREEN_DARK_TWO,
+      card: MAIN_GREEN_DARK_THREE,
     },
     lines: {
-      main: TRANSPARENT_BLACK,
-      dark: TRANSPARENT_BLACK_2,
-      light: TRANSPARENT_BLACK_3,
-      border: BORDER_LIGHT_GRAY
-    }
+      main: MAIN_GREEN_DARK_TWO,
+      dark: MAIN_GREEN_DARK_THREE,
+      light: SECONDARY_GREEN_LIGHT,
+      border: SECONDARY_GREEN_LIGHT_TWO,
+    },
   },
   typography: {
     fontSize: 13,
-    htmlFontSize: 13
+    htmlFontSize: 13,
   },
   overrides: {
     MuiAppBar: {
       colorDefault: {
-        backgroundColor: 'transparent'
-      }
+        backgroundColor: "transparent",
+      },
     },
     MuiTypography: {
+      h2: {
+        // fontFamily: PRIMARY_FONT,
+        fontWeight: "bold",
+        fontSize: rem(41),
+        color: WHITE,
+        position: "relative",
+        paddingTop: 15,
+
+        "&:before": {
+          content: '""',
+          backgroundColor: WHITE,
+          width: 35,
+          height: 5,
+          position: "absolute",
+          top: 0,
+          left: 0,
+        },
+      },
       body2: {
         // fontFamily: PRIMARY_FONT,
         fontSize: rem(18),
-        color: TEXT_DEFAULT
+        color: WHITE,
       },
     },
-  }
+  },
 });
 
 export default theme;
