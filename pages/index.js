@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "material-ui-image";
-import Backdrop from '@material-ui/core/Backdrop';
+import DividerSection from '../components/c_004-DividerSection/DividerSection';
 import styles from "../styles/Home.module.css";
 
 const HomePage = () => {
@@ -11,14 +11,12 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={styles.imageContainer}>
-        <Image
-          src="/photos/blizzard-cover.jpg"
-          animationDuration={1000}
-          disableSpinner
-          style={{paddingTop: '0', height: '100%', width: '100%', objectFit: 'cover'}}
-        />
-      </section>
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to <a href="https://nextjs.org">Nativo 27</a>
+        </h1>
+      </main>
+      <DividerSection srcImage="/photos/2020_Blizzconline_Zoom_background_WOW_01.jpeg"/>
     </main>
   );
 };

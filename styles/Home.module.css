@@ -1,10 +1,9 @@
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fffcf3;
+  background-color: #304e43;
 }
 
 .imageContainer {
@@ -16,7 +15,7 @@
 
 .main {
   padding: 5rem 0;
-  flex: 1;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

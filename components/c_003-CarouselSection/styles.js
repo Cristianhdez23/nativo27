@@ -4,17 +4,18 @@ export default makeStyles((theme) => ({
   // ----||----|| Carousel Styles ||----||----
   carouselSection: {
     boxSizing: "border-box",
-    height: "100vh",
-    width: "100%",
-    minHeight: "100vh",
-    minWidth: "100%",
     position: "relative",
+    width: "100%",
     backgroundColor: theme.palette.primary.transparent,
+    padding: "200px 0",
+    [theme.breakpoints.up("md")]: {
+      padding: "150px 0",
+    },
   },
   carouselSectionBlock: {
     display: "flex",
     justifyContent: "center",
-    marginTop: 130,
+    position: "relative",
   },
   textToLeft: {
     flexDirection: "row-reverse",

@@ -11,12 +11,11 @@ const Naturaleza = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ImageBanner
-        srcImage="/photos/2020_Blizzconline_Zoom_background_OW02.jpeg"
-        title="Contacto con la naturaleza"
-      />
-
-      <CarouselSection />
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Welcome to <a href="https://nextjs.org">Naturaleza</a>
+        </h1>
+      </main>
     </main>
   );
 };

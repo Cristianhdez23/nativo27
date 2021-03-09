@@ -18,6 +18,9 @@ const MAIN_YELLOW = "#ddc26c";
 const MAIN_GRAY = "#919191";
 const MAIN_GRAY_TWO = "#8e8e8e";
 
+const MAIN_BACKGROUND = "#fffcf3";
+const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)"
+
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 
 // Create a theme instance.
@@ -46,9 +49,9 @@ const theme = createMuiTheme({
       light: MAIN_GREEN_DARK,
     },
     background: {
-      main: MAIN_GREEN_DARK,
+      main: MAIN_BACKGROUND,
       default: MAIN_GREEN_DARK_TWO,
-      card: MAIN_GREEN_DARK_THREE,
+      card: MAIN_BACKGROUND_TRANSPARENT,
     },
     lines: {
       main: MAIN_GREEN_DARK_TWO,

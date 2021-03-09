@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import {
   Grid,
@@ -7,10 +7,11 @@ import {
   AppBar,
   IconButton,
   SwipeableDrawer,
-  Divider,
   List,
   Typography,
+  useMediaQuery,
 } from "@material-ui/core";
+import { useTheme } from "@material-ui/core/styles";
 import { Close as CloseIcon, Menu as MenuIcon } from "@material-ui/icons";
 import { SITE_TITLE } from "../../constants/constants";
 import { NAV_ITEMS } from "./navItems";
@@ -20,6 +21,14 @@ import useStyles from "./styles";
 const Navigation = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [shadow, setShadow] = React.useState(0);
+  const theme = useTheme();
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+
+  const getBodyScrollTop = () => {
+    const el = document.scrollingElement || document.documentElement;
+    return el.scrollTop;
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -28,10 +37,29 @@ const Navigation = () => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (getBodyScrollTop() > 30) {
+        setShadow(1);
+      } else {
+        setShadow(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollInLgScreen = shadow === 1 && isLargeScreen;
+
   const navMenuList = NAV_ITEMS.map(({ id, slug, title }) => {
     return (
       <ActiveLink key={id} href={slug} activeClassName={classes.activeLink}>
-        <a className={`${classes.drawerLink}`}>
+        <a
+          className={`${classes.drawerLink} ${
+            scrollInLgScreen ? classes.drawerLinkScrolling : ""
+          }`}
+        >
           <Typography variant="body2" component="span">
             {title}
           </Typography>
@@ -39,16 +67,39 @@ const Navigation = () => {
       </ActiveLink>
     );
   });
-
   return (
     <React.Fragment>
-      <AppBar position="static" color="default" className={classes.appBar}>
+      <AppBar
+        position="static"
+        color="default"
+        elevation={shadow}
+        className={`${classes.appBar} ${
+          scrollInLgScreen ? classes.scrolling : ""
+        }`}
+      >
         <Toolbar className={`${classes.toolbar}`}>
-          <Grid container>
+          <Grid container className={`${classes.toolbarDataBlock}`}>
             <Grid item xs={8} md={3}>
               <Link href="/">
                 <a className={classes.headerLogo}>
-                  <img src="" alt={SITE_TITLE} />
+                  {isLargeScreen && (
+                    <img
+                      className={classes.logo}
+                      src={
+                        shadow === 0
+                          ? `/photos/logo/logo_nativo27-white.svg`
+                          : `/photos/logo/logo_nativo27-green.svg`
+                      }
+                      alt={SITE_TITLE}
+                    />
+                  )}
+                  {!isLargeScreen && (
+                    <img
+                      className={classes.logo}
+                      src="/photos/logo/logo_nativo27-green.svg"
+                      alt={SITE_TITLE}
+                    />
+                  )}
                 </a>
               </Link>
             </Grid>
@@ -62,7 +113,7 @@ const Navigation = () => {
               </Grid>
             </Hidden>
             <Hidden lgUp>
-              <nav className={classes.mobileNav}>
+              <div className={classes.mobileNav}>
                 <IconButton
                   edge="start"
                   color="inherit"
@@ -72,7 +123,7 @@ const Navigation = () => {
                 >
                   <MenuIcon />
                 </IconButton>
-              </nav>
+              </div>
             </Hidden>
           </Grid>
         </Toolbar>
@@ -88,12 +139,26 @@ const Navigation = () => {
         onClick={handleDrawerClose}
       >
         <div className={classes.closeIconBlock}>
-          <IconButton onClick={handleDrawerClose}>
+          <Grid container className={classes.mobileLogoBlock}>
+            <Grid item xs={8} md={3}>
+              <Link href="/">
+                <a className={classes.headerLogo}>
+                  <img
+                    src="/photos/logo/logo_nativo27-green.svg"
+                    alt={SITE_TITLE}
+                  />
+                </a>
+              </Link>
+            </Grid>
+          </Grid>
+          <IconButton
+            className={classes.menuMobileButton}
+            onClick={handleDrawerClose}
+          >
             <CloseIcon />
           </IconButton>
         </div>
-        <Divider />
-        <List>{navMenuList}</List>
+        <List className={classes.mobileNavItemsList}>{navMenuList}</List>
       </SwipeableDrawer>
     </React.Fragment>
   );

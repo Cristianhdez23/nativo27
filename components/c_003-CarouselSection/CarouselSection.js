@@ -42,7 +42,9 @@ const CarouselSection = ({ textToLeft }) => {
         <Grid item xs={12} sm={12} md={5}>
           <article
             className={`${classes.informationBlock} ${
-              textToLeft ? classes.informationBlockToLeft : classes.informationBlockToRight
+              textToLeft
+                ? classes.informationBlockToLeft
+                : classes.informationBlockToRight
             }`}
           >
             <Typography variant="h3" component="h3">
