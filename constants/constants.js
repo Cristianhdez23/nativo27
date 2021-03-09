@@ -19,7 +19,9 @@ const MAIN_GRAY = "#919191";
 const MAIN_GRAY_TWO = "#8e8e8e";
 
 const MAIN_BACKGROUND = "#fffcf3";
-const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)"
+const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)";
+
+const PRIMARY_FONT = 'quiche-display , Roboto, Helvetica, Arial, sansSerif';
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 
@@ -61,6 +63,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    fontFamily: PRIMARY_FONT,
     fontSize: 13,
     htmlFontSize: 13,
   },
@@ -94,6 +97,11 @@ const theme = createMuiTheme({
         fontSize: rem(18),
         color: WHITE,
       },
+    },
+  },
+  "@global": {
+    body: {
+      color: "pink",
     },
   },
 });

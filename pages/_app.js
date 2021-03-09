@@ -7,6 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Navigation from '../components/c_001-Navigation/Navigation';
 
 import theme from '../constants/constants';
+import '../styles/globals.css';
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
