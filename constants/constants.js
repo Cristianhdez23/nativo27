@@ -54,7 +54,7 @@ const theme = createMuiTheme({
     },
     background: {
       main: MAIN_BACKGROUND,
-      default: MAIN_GREEN_DARK_TWO,
+      default: MAIN_BACKGROUND,
       card: MAIN_BACKGROUND_TRANSPARENT,
       light: BACKDROP_BACKGROUND,
     },
@@ -108,11 +108,6 @@ const theme = createMuiTheme({
         fontSize: rem(18),
         color: WHITE,
       },
-    },
-  },
-  "@global": {
-    body: {
-      color: "pink",
     },
   },
 });

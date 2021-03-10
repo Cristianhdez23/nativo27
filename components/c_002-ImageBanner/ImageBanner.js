@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
 
-const ImageBanner = ({ srcImage, title }) => {
+const ImageBanner = ({ srcImage, data, color }) => {
   const classes = useStyles();
   return (
     <section className={classes.ImageBanner}>
@@ -22,21 +22,27 @@ const ImageBanner = ({ srcImage, title }) => {
           }}
         />
       </article>
-      <section className={classes.informationBlock}>
-        {/* CHANGE IT TO READ JSON FILE */}
-        <article>
-          <Typography variant="h2" component="h2">
-            El encanto del eje cafetero
-          </Typography>
-          <Typography
-            variant="body1"
-            component="p"
-            className={classes.imageParagraph}
-          >
-            Cerritos - Pereira es una de las zonas con mayor desarrollo y
-            crecimiento en el Eje Cafetero.
-          </Typography>
-        </article>
+      <section className={`${classes.informationBlock} ${color}`}>
+        {data?.map(({ title, description }, index) => {
+          return (
+            <article key={index}>
+              <Typography
+                variant="h2"
+                component="h2"
+                className={classes.imageTitle}
+              >
+                {title}
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                className={classes.imageParagraph}
+              >
+                {description}
+              </Typography>
+            </article>
+          );
+        })}
       </section>
     </section>
   );
