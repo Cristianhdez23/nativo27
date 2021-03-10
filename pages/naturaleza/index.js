@@ -1,6 +1,8 @@
 import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
-import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
+// --||----||----|| JSON DATA ||----||----||-- //
+import { BANNER_DATA } from "./data/bannerData";
+// --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
 
 const Naturaleza = () => {
@@ -11,11 +13,11 @@ const Naturaleza = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Naturaleza</a>
-        </h1>
-      </main>
+      <ImageBanner
+        srcImage="/photos/naturaleza/bg-naturaleza.jpg"
+        color="secondary"
+        data={BANNER_DATA}
+      />
     </main>
   );
 };

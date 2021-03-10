@@ -14,7 +14,7 @@ import {
 import { useTheme } from "@material-ui/core/styles";
 import { Close as CloseIcon, Menu as MenuIcon } from "@material-ui/icons";
 import { SITE_TITLE } from "../../constants/constants";
-import { NAV_ITEMS } from "./navItems";
+import { NAV_ITEMS } from "./data/navItems";
 import ActiveLink from "./ActiveLink";
 import useStyles from "./styles";
 

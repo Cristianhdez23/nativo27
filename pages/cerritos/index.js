@@ -1,7 +1,8 @@
 import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
-import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
-import DividerSection from "../../components/c_004-DividerSection/DividerSection";
+// --||----||----|| JSON DATA ||----||----||-- //
+import { BANNER_DATA } from "./data/bannerData";
+// --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
 
 const Cerritos = () => {
@@ -12,11 +13,11 @@ const Cerritos = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Cerritos</a>
-        </h1>
-      </main>
+      <ImageBanner
+        srcImage="/photos/cerritos/bg-cerritos.jpg"
+        color="primary"
+        data={BANNER_DATA}
+      />
     </main>
   );
 };

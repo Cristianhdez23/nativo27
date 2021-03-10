@@ -21,6 +21,8 @@ const MAIN_GRAY_TWO = "#8e8e8e";
 const MAIN_BACKGROUND = "#fffcf3";
 const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)";
 
+const BACKDROP_BACKGROUND = 'rgba(0, 0, 0, 0.1)';
+
 const PRIMARY_FONT = 'quiche-display , Roboto, Helvetica, Arial, sansSerif';
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
@@ -52,8 +54,9 @@ const theme = createMuiTheme({
     },
     background: {
       main: MAIN_BACKGROUND,
-      default: MAIN_GREEN_DARK_TWO,
+      default: MAIN_BACKGROUND,
       card: MAIN_BACKGROUND_TRANSPARENT,
+      light: BACKDROP_BACKGROUND,
     },
     lines: {
       main: MAIN_GREEN_DARK_TWO,
@@ -75,33 +78,36 @@ const theme = createMuiTheme({
     },
     MuiTypography: {
       h2: {
-        // fontFamily: PRIMARY_FONT,
-        fontWeight: "bold",
-        fontSize: rem(41),
+        fontFamily: PRIMARY_FONT,
+        fontWeight: '500',
+        fontSize: rem(21),
         color: WHITE,
         position: "relative",
-        paddingTop: 15,
+        paddingTop: 16,
+        paddingBottom: 16,
 
         "&:before": {
           content: '""',
           backgroundColor: WHITE,
-          width: 35,
-          height: 5,
+          width: 25,
+          height: 3,
           position: "absolute",
           top: 0,
           left: 0,
         },
       },
+      // Mainly for <p></p> tags
+      body1: {
+        fontFamily: PRIMARY_FONT,
+        fontSize: rem(15),
+        fontWeight: '300',
+        color: WHITE,
+      },
       body2: {
-        // fontFamily: PRIMARY_FONT,
+        fontFamily: PRIMARY_FONT,
         fontSize: rem(18),
         color: WHITE,
       },
-    },
-  },
-  "@global": {
-    body: {
-      color: "pink",
     },
   },
 });
