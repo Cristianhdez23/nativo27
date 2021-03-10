@@ -82,12 +82,11 @@ export default makeStyles((theme) => ({
   },
   // ----||----|| Desktop Navbar Items Styles ||----||----
   drawerLink: {
-    display: "block",
+    display: "initial",
     textDecoration: "none",
     color: theme.palette.primary.main,
     textTransform: "uppercase",
     "& > span": {
-      fontWeight: 500,
       color: "inherit",
     },
     "&:after": {
