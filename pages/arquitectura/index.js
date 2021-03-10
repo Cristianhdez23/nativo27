@@ -1,7 +1,7 @@
 import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
 // --||----||----|| JSON DATA ||----||----||-- //
-import { BANNER_DATA } from "./bannerData";
+import { BANNER_DATA } from "../../jsonData/arquitectura/bannerData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
 
