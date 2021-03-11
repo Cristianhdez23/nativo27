@@ -23,6 +23,8 @@ const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)";
 
 const BACKDROP_BACKGROUND = 'rgba(0, 0, 0, 0.1)';
 
+const TEXT_PARAGRAPH = '#606060';
+
 const PRIMARY_FONT = 'quiche-display , Roboto, Helvetica, Arial, sansSerif';
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
@@ -50,7 +52,7 @@ const theme = createMuiTheme({
     text: {
       main: WHITE,
       secondary: MAIN_GRAY,
-      light: MAIN_GREEN_DARK,
+      light: TEXT_PARAGRAPH,
     },
     background: {
       main: MAIN_BACKGROUND,
@@ -80,7 +82,7 @@ const theme = createMuiTheme({
       h2: {
         fontFamily: PRIMARY_FONT,
         fontWeight: '500',
-        fontSize: rem(21),
+        fontSize: rem(22),
         color: WHITE,
         position: "relative",
         paddingTop: 16,
@@ -99,7 +101,7 @@ const theme = createMuiTheme({
       // Mainly for <p></p> tags
       body1: {
         fontFamily: PRIMARY_FONT,
-        fontSize: rem(15),
+        fontSize: rem(16),
         fontWeight: '300',
         color: WHITE,
       },

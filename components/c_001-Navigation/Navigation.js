@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Image from "material-ui-image";
 import Link from "next/link";
 import {
   Grid,
