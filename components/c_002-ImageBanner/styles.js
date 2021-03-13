@@ -27,7 +27,7 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.palette.background.light,
   },
   informationBlock: {
-    margin: '15px 15px 0 15px',
+    margin: '20px 20px 0 20px',
     padding: "25px 34px",
     position: "relative",
     [theme.breakpoints.up("lg")]: {

@@ -82,7 +82,7 @@ const theme = createMuiTheme({
       h2: {
         fontFamily: PRIMARY_FONT,
         fontWeight: '500',
-        fontSize: rem(22),
+        fontSize: rem(20),
         color: WHITE,
         position: "relative",
         paddingTop: 16,
@@ -101,7 +101,7 @@ const theme = createMuiTheme({
       // Mainly for <p></p> tags
       body1: {
         fontFamily: PRIMARY_FONT,
-        fontSize: rem(16),
+        fontSize: rem(14),
         fontWeight: '300',
         color: WHITE,
       },

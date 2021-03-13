@@ -1,49 +1,67 @@
 import React from "react";
 import Image from "material-ui-image";
 import { SITE_TITLE } from "../../constants/constants";
-import { Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
 
-const ImageSection = ({ srcImage, isImageToRight, isImageToLeft }) => {
+const ImageSection = ({ srcImage, isImageToRight, isImageToLeft, data }) => {
   const classes = useStyles();
   return (
     <section className={classes.ImageSection}>
-      <article className={classes.imageBlock}>
-        <Image
-          src={srcImage}
-          animationDuration={1000}
-          disableSpinner
-          style={{
-            paddingTop: "0",
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-          }}
-        />
-      </article>
-      <article className={`${classes.paragraphBlock}`}>
-        <span
-          className={`${classes.watermarkBlock} ${isImageToLeft ? classes.watermarkRight : ""} ${
-            isImageToRight ? classes.watermarkLeft : ""
-          }`}
-        >
-          <Image
-            className={classes.watermark}
-            src="/photos/logo/marca-nativo27.svg"
-            alt={SITE_TITLE}
-          />
-        </span>
-        <Typography variant="body1" component="p" className={classes.paragraph}>
-          Cerritos cuenta con una gran infraestructura vial que comunica el
-          sector con Pereira y ciudades como Cali, Cartago, entre otras. El
-          sector dispone de una ubicación estratégica a pocos minutos del
-          aeropuerto internacional Matecaña, con vuelos directos hacia todo el
-          territorio nacional y destinos internacionales como Miami y Panamá.
-          Las características anteriores le brindan a Cerritos la oportunidad de
-          ser un territorio logístico donde se promueve el clima de negocios.
-        </Typography>
-      </article>
+      <Grid
+        container
+        className={`${classes.GridContainer}  ${
+          isImageToLeft ? classes.imageLeft : ""
+        } ${isImageToRight ? classes.imageRight : ""}`}
+      >
+        <Grid item xs={12} sm={12} md={12} lg={5}>
+          <article className={classes.imageBlock}>
+            <Image
+              src={srcImage}
+              animationDuration={1000}
+              disableSpinner
+              style={{
+                paddingTop: "0",
+                height: "100%",
+                width: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </article>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12} lg={5}>
+          <article
+            className={`${classes.paragraphBlock} ${
+              isImageToLeft ? classes.paragraphBlockToRight : ""
+            } ${isImageToRight ? classes.paragraphBlockToLeft : ""}`}
+          >
+            <span
+              className={`${classes.watermarkBlock} ${
+                isImageToLeft ? classes.watermarkRight : ""
+              } ${isImageToRight ? classes.watermarkLeft : ""}`}
+            >
+              <Image
+                className={classes.watermark}
+                src="/photos/logo/marca-nativo27.svg"
+                alt={SITE_TITLE}
+              />
+            </span>
+            {data?.map(({ description }, index) => {
+              return (
+                <Typography
+                  key={index}
+                  variant="body1"
+                  component="p"
+                  className={classes.paragraph}
+                >
+                  {description}
+                </Typography>
+              );
+            })}
+          </article>
+        </Grid>
+      </Grid>
     </section>
   );
 };
