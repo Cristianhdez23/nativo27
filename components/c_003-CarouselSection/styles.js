@@ -21,38 +21,68 @@ export default makeStyles((theme) => ({
   // ----||----|| Carousel Styles ||----||----
   carouselBlock: {
     position: "relative",
-
     "& div:nth-child(2)": {
-      border: "1px solid pink",
       display: "flex",
       justifyContent: "flex-start",
+      maxWidth: 205,
+      right: "50%",
+      transform: "translateX(calc(150%))",
+      width: "100%",
+      zIndex: 1,
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: 400,
+      },
+      [theme.breakpoints.up("md")]: {
+        maxWidth: 450,
+      },
       [theme.breakpoints.up("lg")]: {
-        right: "50%",
-        transform: "translateX(calc(150%))",
-        width: "100%",
+        maxWidth: 400,
+      },
+      [theme.breakpoints.up("xl")]: {
         maxWidth: 450,
       },
     },
 
     "& div:nth-child(3)": {
-      border: "1px solid green",
       display: "flex",
       justifyContent: "flex-end",
+      maxWidth: 205,
+      left: "50%",
+      transform: "translateX(calc(-150%))",
+      width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: 400,
+      },
+      [theme.breakpoints.up("md")]: {
+        maxWidth: 450,
+      },
       [theme.breakpoints.up("lg")]: {
-        left: "50%",
-        transform: "translateX(calc(-150%))",
-        width: "100%",
+        maxWidth: 400,
+      },
+      [theme.breakpoints.up("xl")]: {
         maxWidth: 450,
       },
     },
   },
   carouselItem: {
-    border: "1px solid red",
     display: "flex",
     margin: "auto",
-    height: 650,
+    height: 335,
     width: "100%",
+    maxWidth: 240,
+    [theme.breakpoints.up("sm")]: {
+      height: 600,
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 450,
+    },
     [theme.breakpoints.up("lg")]: {
+      height: 600,
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 650,
       maxWidth: 450,
     },
   },
@@ -63,21 +93,34 @@ export default makeStyles((theme) => ({
     position: "absolute",
     bottom: 0,
     left: "50%",
-    width: "auto",
+    width: "100%",
     margin: 0,
     zIndex: 11,
-    [theme.breakpoints.up("lg")]: {
-      width: "100%",
-      maxWidth: 450,
+    maxWidth: 240,
+    transform: "translateX(calc(-50% - 22.5px))",
+    [theme.breakpoints.up("sm")]: {
       transform: "translateX(calc(-50% - 37.5px))",
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 450,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 450,
     },
   },
   indicatorIcon: {
     cursor: "pointer",
     color: "#2f5f32",
-    fontSize: 25,
+    fontSize: 15,
     "&:hover": {
       color: theme.palette.secondary.contrastText,
+    },
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 25,
     },
   },
   indicatorIconGeneralStyle: {
@@ -156,39 +199,64 @@ export default makeStyles((theme) => ({
     display: "flex",
     margin: "10px auto 0 auto",
     color: theme.palette.lines.border,
-    letterSpacing: "1px",
-    fontSize: rem(6),
-    [theme.breakpoints.up("lg")]: {
-      maxWidth: 450,
+    letterSpacing: "0.5px",
+    textAlign: 'justify',
+    fontSize: rem(5),
+    maxWidth: 240,
+    [theme.breakpoints.up("sm")]: {
+      letterSpacing: "1px",
       fontSize: rem(8),
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: 450,
+    },
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: 400,
+    },
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: 450,
     },
   },
   navButtons: {
-    border: "1px solid red",
     backgroundColor: `${theme.palette.primary.transparent} !important`,
     "&:hover": {
       backgroundColor: `${theme.palette.primary.transparent} !important`,
     },
   },
   NextIcon: {
-    height: 69,
-    width: 69,
+    height: 40,
+    width: 40,
+    margin: 0,
+    [theme.breakpoints.up("sm")]: {
+      margin: "initial",
+      height: 69,
+      width: 69,
+    },
   },
   PreviousIcon: {
-    height: 69,
-    width: 69,
+    height: 40,
+    width: 40,
+    margin: 0,
+    [theme.breakpoints.up("sm")]: {
+      margin: "initial",
+      height: 69,
+      width: 69,
+    },
   },
   nextArrowIcon: {
     transform: "rotate(90deg)",
     fill: theme.palette.primary.dark,
-    [theme.breakpoints.up("lg")]: {
+    fontSize: rem(40),
+    [theme.breakpoints.up("sm")]: {
       fontSize: rem(65),
     },
   },
   previousArrowIcon: {
     transform: "rotate(270deg)",
     fill: theme.palette.primary.dark,
-    [theme.breakpoints.up("lg")]: {
+    fontSize: rem(40),
+    [theme.breakpoints.up("sm")]: {
       fontSize: rem(65),
     },
   },

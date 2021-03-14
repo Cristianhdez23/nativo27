@@ -1,6 +1,8 @@
 import Head from "next/head";
-import Image from "material-ui-image";
-import DividerSection from '../components/c_004-DividerSection/DividerSection';
+import DividerSection from "../components/c_004-DividerSection/DividerSection";
+// --||----||----|| JSON DATA ||----||----||-- //
+import { DIVIDER_DATA_HOMEPAGE } from "../jsonData/homepage/4-DividerSectionData";
+// --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../styles/Home.module.css";
 
 const HomePage = () => {
@@ -16,7 +18,7 @@ const HomePage = () => {
           Welcome to <a href="https://nextjs.org">Nativo 27</a>
         </h1>
       </main>
-      <DividerSection srcImage="/photos/2020_Blizzconline_Zoom_background_WOW_01.jpeg"/>
+      <DividerSection color="tertiary" data={DIVIDER_DATA_HOMEPAGE} />
     </main>
   );
 };

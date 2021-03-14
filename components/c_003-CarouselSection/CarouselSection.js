@@ -55,9 +55,32 @@ const CarouselSection = ({ data }) => {
               );
             }}
           >
-            <div className={classes.carouselItem}>xs=1</div>
-            <div className={classes.carouselItem}>xs=3</div>
-            <div className={classes.carouselItem}>xs=4</div>
+            <div className={classes.carouselItem}>
+              <Image
+                src="/photos/cerritos/bg-cerritos.jpg"
+                animationDuration={1000}
+                disableSpinner
+                style={{
+                  paddingTop: "0",
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+            <div className={classes.carouselItem}>
+              <Image
+                src="/photos/cerritos/bg-cerritos.jpg"
+                animationDuration={1000}
+                disableSpinner
+                style={{
+                  paddingTop: "0",
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
           </Carousel>
           <p className={classes.disclaimer}>
             *Las imágenes y planos son representación arquitectónica del

@@ -10,17 +10,20 @@ const DividerSection = ({ srcImage, useImageOnly, color, data }) => {
   return (
     <section className={classes.dividerSection}>
       {useImageOnly && (
-        <Image
-          src={srcImage}
-          animationDuration={1000}
-          disableSpinner
-          style={{
-            paddingTop: "0",
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-          }}
-        />
+        <>
+          <div className={classes.imageBackdrop}></div>
+          <Image
+            src={srcImage}
+            animationDuration={1000}
+            disableSpinner
+            style={{
+              paddingTop: "0",
+              height: "100%",
+              width: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </>
       )}
       {!useImageOnly && (
         <div className={`${classes.dividerTextBlock} ${color}`}>
