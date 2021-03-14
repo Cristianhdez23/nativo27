@@ -21,11 +21,12 @@ const MAIN_GRAY_TWO = "#8e8e8e";
 const MAIN_BACKGROUND = "#fffcf3";
 const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)";
 
-const BACKDROP_BACKGROUND = 'rgba(0, 0, 0, 0.1)';
+const BACKDROP_BACKGROUND = "rgba(0, 0, 0, 0.1)";
 
-const TEXT_PARAGRAPH = '#606060';
+const TEXT_PARAGRAPH = "#606060";
+const TEXT_PARAGRAPH_TWO = "#c1bfb9";
 
-const PRIMARY_FONT = 'quiche-display , Roboto, Helvetica, Arial, sansSerif';
+const PRIMARY_FONT = "quiche-display , Roboto, Helvetica, Arial, sansSerif";
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 
@@ -64,7 +65,7 @@ const theme = createMuiTheme({
       main: MAIN_GREEN_DARK_TWO,
       dark: MAIN_GREEN_DARK_THREE,
       light: SECONDARY_GREEN_LIGHT,
-      border: SECONDARY_GREEN_LIGHT_TWO,
+      border: TEXT_PARAGRAPH_TWO,
     },
   },
   typography: {
@@ -81,7 +82,7 @@ const theme = createMuiTheme({
     MuiTypography: {
       h2: {
         fontFamily: PRIMARY_FONT,
-        fontWeight: '500',
+        fontWeight: "500",
         fontSize: rem(20),
         color: WHITE,
         position: "relative",
@@ -102,13 +103,13 @@ const theme = createMuiTheme({
         fontFamily: PRIMARY_FONT,
         color: WHITE,
         fontSize: rem(20),
-        fontWeight: '300',
+        fontWeight: "300",
       },
       // Mainly for <p></p> tags
       body1: {
         fontFamily: PRIMARY_FONT,
         fontSize: rem(14),
-        fontWeight: '300',
+        fontWeight: "300",
         color: WHITE,
       },
       body2: {

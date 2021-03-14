@@ -2,6 +2,7 @@ import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
 import DividerSection from "../../components/c_004-DividerSection/DividerSection";
 import ImageSection from "../../components/c_005-ImageSection/ImageSection";
+import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../../jsonData/cerritos/1-bannerData";
 import { SECOND_IMAGE_SECTION_DATA } from "../../jsonData/cerritos/2-imageSectionData";
@@ -11,6 +12,8 @@ import { DIVIDER_DATA_CERRITOS } from "../../jsonData/cerritos/4-DividerSectionD
 import { DIVIDER_DATA_ARQUITECTURA } from "../../jsonData/arquitectura/3-DividerSectionData";
 import { DIVIDER_DATA_HOMEPAGE } from "../../jsonData/homepage/4-DividerSectionData";
 import { DIVIDER_DATA_NATURALEZA } from "../../jsonData/naturaleza/3-DividerSectionData";
+
+import { CAROUSEL_DATA } from "../../jsonData/arquitectura/2-carouselData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
 
@@ -53,6 +56,8 @@ const Cerritos = () => {
       <DividerSection color="secondary" data={DIVIDER_DATA_ARQUITECTURA} />
       {/* Cerritos Page */}
       <DividerSection color="fourth" data={DIVIDER_DATA_CERRITOS} />
+
+      <CarouselSection data={CAROUSEL_DATA}/>
     </main>
   );
 };
