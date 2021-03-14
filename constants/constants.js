@@ -98,6 +98,12 @@ const theme = createMuiTheme({
           left: 0,
         },
       },
+      h3: {
+        fontFamily: PRIMARY_FONT,
+        color: WHITE,
+        fontSize: rem(20),
+        fontWeight: '300',
+      },
       // Mainly for <p></p> tags
       body1: {
         fontFamily: PRIMARY_FONT,
