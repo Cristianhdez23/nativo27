@@ -90,6 +90,8 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.palette.background.main,
   },
   paragraph: {
+    display: 'flex',
+    flexDirection: 'column',
     boxSizing: "border-box",
     position: "relative",
     textAlign: "justify",
@@ -110,5 +112,8 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: rem(16),
     },
+  },
+  paragraphTitle: {
+    fontWeight: 'bold'
   },
 }));

@@ -1,6 +1,11 @@
 import Head from "next/head";
+import CarouselBanner from "../components/c_006-CarouselBanner/CarouselBanner";
+import ImageSection from "../components/c_005-ImageSection/ImageSection";
 import DividerSection from "../components/c_004-DividerSection/DividerSection";
 // --||----||----|| JSON DATA ||----||----||-- //
+import { BANNER_DATA } from "../jsonData/homepage/1-bannerData";
+import { SECOND_IMAGE_SECTION_DATA } from "../jsonData/homepage/2-imageSectionData";
+import { THIRD_IMAGE_SECTION_DATA } from "../jsonData/homepage/3-imageSectionData";
 import { DIVIDER_DATA_HOMEPAGE } from "../jsonData/homepage/4-DividerSectionData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../styles/Home.module.css";
@@ -13,11 +18,20 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Nativo 27</a>
-        </h1>
-      </main>
+      <CarouselBanner color="primary" data={BANNER_DATA} />
+
+      <ImageSection
+        srcImage="/photos/cerritos/img-section-cerritos.jpg"
+        isImageToLeft
+        data={SECOND_IMAGE_SECTION_DATA}
+      />
+
+      <ImageSection
+        srcImage="/photos/cerritos/img-two-section-cerritos.jpg"
+        isImageToRight
+        data={THIRD_IMAGE_SECTION_DATA}
+      />
+
       <DividerSection color="tertiary" data={DIVIDER_DATA_HOMEPAGE} />
     </main>
   );
