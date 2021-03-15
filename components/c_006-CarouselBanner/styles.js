@@ -119,7 +119,7 @@ export default makeStyles((theme) => ({
     color: theme.palette.primary.gray,
     position: "relative",
     marginLeft: 10,
-    marginBottom: 50,
+    marginBottom: 130,
     borderRadius: 0,
     "&:hover": {
       color: theme.palette.primary.white,
