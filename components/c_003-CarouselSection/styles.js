@@ -201,11 +201,11 @@ export default makeStyles((theme) => ({
     color: theme.palette.lines.border,
     letterSpacing: "0.5px",
     textAlign: 'justify',
-    fontSize: rem(5),
+    fontSize: rem(8),
     maxWidth: 240,
     [theme.breakpoints.up("sm")]: {
       letterSpacing: "1px",
-      fontSize: rem(8),
+      fontSize: rem(10),
       maxWidth: 400,
     },
     [theme.breakpoints.up("md")]: {

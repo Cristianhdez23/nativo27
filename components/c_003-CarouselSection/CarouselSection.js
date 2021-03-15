@@ -82,11 +82,11 @@ const CarouselSection = ({ data }) => {
               />
             </div>
           </Carousel>
-          <p className={classes.disclaimer}>
+          <Typography component="p" className={classes.disclaimer}>
             *Las imágenes y planos son representación arquitectónica del
             proyecto, pueden estar sujetas a modificaciones sin previo aviso.
             Áreas aproximadas.
-          </p>
+          </Typography>
         </Grid>
 
         <Grid item xs={12} sm={12} md={12} lg={5}>
