@@ -1,6 +1,7 @@
 import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
 import DividerSection from "../../components/c_004-DividerSection/DividerSection";
+import Footer from '../../components/c_008-Footer/Footer';
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../../jsonData/naturaleza/1-bannerData";
 import { DIVIDER_DATA_NATURALEZA } from "../../jsonData/naturaleza/3-DividerSectionData";
@@ -22,6 +23,8 @@ const Naturaleza = () => {
       />
 
       <DividerSection color="primary" data={DIVIDER_DATA_NATURALEZA} />
+
+      <Footer />
     </main>
   );
 };

@@ -2,6 +2,7 @@ import Head from "next/head";
 import CarouselBanner from "../components/c_006-CarouselBanner/CarouselBanner";
 import ImageSection from "../components/c_005-ImageSection/ImageSection";
 import DividerSection from "../components/c_004-DividerSection/DividerSection";
+import Footer from '../components/c_008-Footer/Footer';
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../jsonData/homepage/1-bannerData";
 import { SECOND_IMAGE_SECTION_DATA } from "../jsonData/homepage/2-imageSectionData";
@@ -33,6 +34,8 @@ const HomePage = () => {
       />
 
       <DividerSection color="tertiary" data={DIVIDER_DATA_HOMEPAGE} />
+
+      <Footer />
     </main>
   );
 };

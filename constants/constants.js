@@ -26,7 +26,10 @@ const BACKDROP_BACKGROUND = "rgba(0, 0, 0, 0.1)";
 const TEXT_PARAGRAPH = "#606060";
 const TEXT_PARAGRAPH_TWO = "#c1bfb9";
 
-export const PRIMARY_FONT = "quiche-display , Roboto, Helvetica, Arial, sansSerif";
+export const ICON_COLOR = "#c2b56a";
+
+export const PRIMARY_FONT =
+  "quiche-display , Roboto, Helvetica, Arial, sansSerif";
 
 export const rem = (pixelSize) => `${pixelSize / 16}rem`;
 

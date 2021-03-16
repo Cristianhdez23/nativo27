@@ -4,6 +4,7 @@ import DividerSection from "../../components/c_004-DividerSection/DividerSection
 import ImageSection from "../../components/c_005-ImageSection/ImageSection";
 import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
 import CarouselBanner from "../../components/c_006-CarouselBanner/CarouselBanner";
+import Footer from '../../components/c_008-Footer/Footer';
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../../jsonData/cerritos/1-bannerData";
 import { SECOND_IMAGE_SECTION_DATA } from "../../jsonData/cerritos/2-imageSectionData";
@@ -61,6 +62,8 @@ const Cerritos = () => {
       <CarouselSection data={CAROUSEL_DATA} />
 
       <CarouselBanner color="primary" data={BANNER_DATA} />
+
+      <Footer />
     </main>
   );
 };

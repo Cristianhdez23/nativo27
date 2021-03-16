@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "material-ui-image";
+import { SITE_TITLE } from "../../constants/constants";
 import { Typography, Grid, Tabs, Tab } from "@material-ui/core";
 
 import useStyles from "./styles";
@@ -22,6 +23,13 @@ const TabsSection = ({ data }) => {
   return (
     <section className={classes.TabsSection}>
       <article position="static" className={classes.tabsNavigation}>
+        <span className={`${classes.watermarkBlock}`}>
+          <Image
+            className={classes.watermark}
+            src="/photos/logo/marca-nativo27.svg"
+            alt={SITE_TITLE}
+          />
+        </span>
         <Tabs
           value={tabValue}
           onChange={handleChange}

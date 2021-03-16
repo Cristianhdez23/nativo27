@@ -3,6 +3,7 @@ import { rem } from "../../constants/constants";
 
 export default makeStyles((theme) => ({
   TabsSection: {
+    position: 'relative',
     display: "flex",
     flexDirection: "column",
     width: "100%",
@@ -149,5 +150,22 @@ export default makeStyles((theme) => ({
       fontSize: rem(35),
       paddingTop: 35,
     },
+  },
+  watermarkBlock: {
+    position: "absolute",
+    bottom: -45,
+    left: 0,
+    width: 110,
+    height: 110,
+    zIndex: -1,
+    [theme.breakpoints.up("lg")]: {
+      bottom: '60%',
+      left: 0,
+      width: 250,
+      height: 250,
+    },
+  },
+  watermark: {
+    backgroundColor: theme.palette.background.main,
   },
 }));
