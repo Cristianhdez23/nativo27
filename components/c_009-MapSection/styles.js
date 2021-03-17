@@ -46,6 +46,7 @@ export default makeStyles((theme) => ({
     width: 150,
     height: 150,
     [theme.breakpoints.up("lg")]: {
+      top: '-100%',
       width: 250,
       height: 250,
     },
@@ -94,7 +95,6 @@ export default makeStyles((theme) => ({
   mapBlock: {
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      
     },
   },
   mapContainer: {

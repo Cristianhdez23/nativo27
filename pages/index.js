@@ -1,4 +1,6 @@
 import Head from "next/head";
+import "react-app-polyfill/ie11";
+import "react-app-polyfill/stable";
 import CarouselBanner from "../components/c_006-CarouselBanner/CarouselBanner";
 import ImageSection from "../components/c_005-ImageSection/ImageSection";
 import DividerSection from "../components/c_004-DividerSection/DividerSection";

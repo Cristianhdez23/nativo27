@@ -15,7 +15,7 @@ const MapSection = ({ data }) => {
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.mapBlock}>
           <article className={classes.mapContainer}>
             <Iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5017.039615372586!2d-74.04478798467441!3d4.708531842899297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f854d855f1269%3A0x5c28788b69343fb3!2sCountry%20Club%20De%20Bogota!5e1!3m2!1sen!2sco!4v1615936780944!5m2!1sen!2sco"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5016.392353126826!2d-75.78187383147925!3d4.7974399979835525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNDcnNDYuNiJOIDc1wrA0Nic1Ni43Ilc!5e1!3m2!1sen!2sco!4v1615955937513!5m2!1sen!2sco"
               className={classes.mapa}
               height="100%"
               width="100%"
@@ -26,7 +26,7 @@ const MapSection = ({ data }) => {
         <Grid item xs={12} sm={12} md={12} lg={5}>
           <article
             className={`${classes.paragraphBlock} ${classes.paragraphBlockToRight}`}
-          > 
+          >
             <span
               className={`${classes.watermarkBlock} ${classes.watermarkRight}`}
             >
