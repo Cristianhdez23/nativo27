@@ -13,7 +13,6 @@ const InputForm = ({ handleInputChange, label, name, variant, type, autoFocus })
       label={label}
       name={name}
       type={type}
-      autoFocus={autoFocus}
       onChange={handleInputChange}
       className={classes.inputForm}
       />
