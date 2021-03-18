@@ -111,7 +111,7 @@ const ContactForm = () => {
             Successfully submitted form!
           </p>
         )}
-           <form name="contact" method="POST" action="/?success=true" data-netlify-recaptcha="true" data-netlify="true">
+           <form name="contact" method="POST" action="/?success=true" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label htmlFor="name">Name</label>
@@ -125,7 +125,6 @@ const ContactForm = () => {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message"></textarea>
               </p>
-              <div data-netlify-recaptcha="true"></div>
               <p>
                 <button type="submit">Send</button>
               </p>
