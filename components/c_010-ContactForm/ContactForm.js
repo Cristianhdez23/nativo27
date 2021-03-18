@@ -35,11 +35,12 @@ const ContactForm = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.formBlock}>
-          {/* <form
+          <form
             className={classes.form}
             autoComplete="off"
             name="contact"
             method="post"
+            netlify
             data-netlify-recaptcha="true"
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -114,48 +115,6 @@ const ContactForm = () => {
               type="submit"
               color="primary"
               className={classes.sendBtn}
-            >
-              Enviar
-            </Button>
-          </form> */}
-          <form name="name_of_my_form" method="post" className={classes.form}>
-            <input type="hidden" name="form-name" value="name_of_my_form" />
-            <InputForm
-              handleInputChange={handleInputChange}
-              label="Nombre"
-              name="nombre"
-              variant="outlined"
-              type="text"
-              autoFocus
-            />
-            <InputForm
-              handleInputChange={handleInputChange}
-              label="Email"
-              name="email"
-              variant="outlined"
-              type="email"
-            />
-            <InputForm
-              handleInputChange={handleInputChange}
-              label="Telefono"
-              name="telefono"
-              variant="outlined"
-              type="text"
-            />
-            <TextField
-              name="mensaje"
-              label="Mensaje"
-              multiline
-              className={classes.textArea}
-              variant="outlined"
-              onChange={handleInputChange}
-              required
-            />
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              className={classes.EnviarBTN}
             >
               Enviar
             </Button>
