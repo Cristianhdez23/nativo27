@@ -118,8 +118,8 @@ const ContactForm = () => {
               Enviar
             </Button>
           </form> */}
-          <form name="contact" method="post" className={classes.form}>
-            <input type="hidden" name="form-name" value="contact" />
+          <form name="name_of_my_form" method="post" className={classes.form}>
+            <input type="hidden" name="form-name" value="name_of_my_form" />
             <InputForm
               handleInputChange={handleInputChange}
               label="Nombre"
