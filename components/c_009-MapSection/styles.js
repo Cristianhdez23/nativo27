@@ -93,7 +93,7 @@ export default makeStyles((theme) => ({
     },
   },
   mapBlock: {
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "100%",
     },
   },
