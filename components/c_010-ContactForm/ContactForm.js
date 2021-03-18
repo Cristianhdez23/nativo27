@@ -37,7 +37,8 @@ const ContactForm = () => {
               required
               fullWidth
               label="Nombre"
-              name="nombre"
+              id="name"
+              name="name"
               variant="standard"
               type="text"
               className={classes.TextField}
@@ -57,6 +58,7 @@ const ContactForm = () => {
             <TextField
               fullWidth
               label="Teléfono"
+              id="telefono"
               name="telefono"
               variant="standard"
               type="tel"
@@ -78,6 +80,7 @@ const ContactForm = () => {
               required
               fullWidth
               label="Email"
+              id="email"
               name="email"
               variant="standard"
               type="email"
