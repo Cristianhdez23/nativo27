@@ -61,7 +61,7 @@ const ContactForm = () => {
               id="telefono"
               name="telefono"
               variant="standard"
-              type="tel"
+              type="text"
               className={classes.TextField}
               InputLabelProps={{
                 classes: {
