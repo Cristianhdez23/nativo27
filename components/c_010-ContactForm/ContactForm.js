@@ -25,12 +25,11 @@ const ContactForm = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.formBlock}>
-          {/* <form
+          <form
             className={classes.form}
             autoComplete="off"
             name="contact"
-            method="POST"
-            data-netlify="true"
+            method="post"
             data-netlify-recaptcha="true"
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -105,27 +104,6 @@ const ContactForm = () => {
             >
               Enviar
             </Button>
-          </form> */}
-          {success && (
-            <p style={{ color: "green" }}>Successfully submitted form!</p>
-          )}
-          <form name="contact" method="post" className={classes.FormContacto}>
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" />
-            </p>
-            <p>
-              <label htmlFor="email">Email</label>
-              <input type="text" id="email" name="email" />
-            </p>
-            <p>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message"></textarea>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
           </form>
         </Grid>
       </Grid>
