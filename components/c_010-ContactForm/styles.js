@@ -54,6 +54,7 @@ export default makeStyles((theme) => ({
       paddingLeft: "5%",
       marginLeft: "25%",
       marginRight: 0,
+      marginBottom: 90,
       maxHeight: 307,
       paddingTop: 200,
     },
@@ -70,18 +71,21 @@ export default makeStyles((theme) => ({
     width: "100%",
     marginLeft: 15,
     marginRight: 15,
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "25%",
+    },
   },
   TextField: {
     marginTop: 30,
   },
   sendBtn: {
-    padding: '8px 16px',
-    marginLeft: 'auto',
+    padding: "8px 16px",
+    marginLeft: "auto",
     marginTop: 50,
     width: 150,
     color: theme.palette.primary.white,
     fontWeight: 300,
-    letterSpacing: '1px',
+    letterSpacing: "1px",
     borderRadius: 0,
     fontSize: rem(16),
   },
@@ -89,8 +93,8 @@ export default makeStyles((theme) => ({
   InputLabel: {
     color: theme.palette.text.contrastText,
     fontFamily: PRIMARY_FONT,
-    textTransform: 'uppercase',
-    fontSize: rem(15)
+    textTransform: "uppercase",
+    fontSize: rem(15),
   },
   InputLabelFocused: {
     color: `${theme.palette.text.light} !important`,
@@ -101,7 +105,23 @@ export default makeStyles((theme) => ({
   },
   underline: {
     "&:before": {
-      borderBottom: `2px solid ${theme.palette.primary.main} !important`
-    } 
-  }
+      borderBottom: `2px solid ${theme.palette.primary.main} !important`,
+    },
+  },
+  watermarkBlock: {
+    position: "absolute",
+    top: -70,
+    right: -20,
+    width: 210,
+    height: 210,
+    [theme.breakpoints.up("lg")]: {
+      top: -120,
+      right: 50,
+      width: 400,
+      height: 400,
+    },
+  },
+  watermark: {
+    backgroundColor: theme.palette.background.main,
+  },
 }));

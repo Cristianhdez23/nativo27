@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Image from "material-ui-image";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
-import InputForm from "../c_010a-InputForm/InputForm";
+import { SITE_TITLE } from "../../constants/constants";
 
 import useStyles from "./styles";
 
@@ -25,6 +26,13 @@ const ContactForm = () => {
   return (
     <section className={classes.ContactForm}>
       <Grid container className={classes.contactBlock}>
+        <span className={`${classes.watermarkBlock}`}>
+          <Image
+            className={classes.watermark}
+            src="/photos/logo/marca-nativo27.svg"
+            alt={SITE_TITLE}
+          />
+        </span>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.dataBlock}>
           <Typography
             variant="h3"
@@ -38,18 +46,17 @@ const ContactForm = () => {
           <form
             className={classes.form}
             autoComplete="off"
-            name="contact"
+            name="contactForm"
             method="post"
-            netlify
             data-netlify-recaptcha="true"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contactForm" />
             <TextField
               required
               fullWidth
               label="Nombre"
-              id="name"
-              name="name"
+              id="nombre"
+              name="nombre"
               variant="standard"
               type="text"
               className={classes.TextField}
