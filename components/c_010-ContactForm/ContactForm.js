@@ -46,11 +46,11 @@ const ContactForm = () => {
           <form
             className={classes.form}
             autoComplete="off"
-            name="contactForm"
+            name="contact"
             method="post"
             data-netlify-recaptcha="true"
           >
-            <input type="hidden" name="form-name" value="contactForm" />
+            <input type="hidden" name="form-name" value="contact" />
             <TextField
               required
               fullWidth
