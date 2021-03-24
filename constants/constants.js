@@ -22,6 +22,7 @@ const MAIN_BACKGROUND = "#fffcf3";
 const MAIN_BACKGROUND_TRANSPARENT = "rgba(255,252,243,1)";
 
 const BACKDROP_BACKGROUND = "rgba(0, 0, 0, 0.1)";
+export const BACKDROP_BACKGROUND_TWO = "rgba(0, 0, 0, 0.6)";
 
 const TEXT_PARAGRAPH = "#606060";
 const TEXT_PARAGRAPH_TWO = "#c1bfb9";
