@@ -82,6 +82,7 @@ export default makeStyles((theme) => ({
   },
   // ----||----|| Desktop Navbar Items Styles ||----||----
   drawerLink: {
+    cursor: "pointer",
     display: "initial",
     textDecoration: "none",
     color: theme.palette.primary.main,

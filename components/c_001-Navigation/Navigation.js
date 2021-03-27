@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import Image from "material-ui-image";
+
+import { scroller } from "react-scroll";
+
 import Link from "next/link";
 import {
   Grid,
@@ -68,6 +70,52 @@ const Navigation = () => {
       </ActiveLink>
     );
   });
+
+  const scrollToMapSection = () => {
+    scroller.scrollTo("scroll-to-map-section", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -80,
+    });
+  };
+
+  const scrollToFormSection = () => {
+    scroller.scrollTo("scroll-to-form-section", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -80,
+    });
+  };
+
+  const scrollToNavItems = () => {
+    return (
+      <>
+        <a
+          className={`${classes.drawerLink} ${
+            scrollInLgScreen ? classes.drawerLinkScrolling : ""
+          }`}
+          onClick={scrollToMapSection}
+        >
+          <Typography variant="body2" component="span">
+            Ubicacion
+          </Typography>
+        </a>
+        <a
+          className={`${classes.drawerLink} ${
+            scrollInLgScreen ? classes.drawerLinkScrolling : ""
+          }`}
+          onClick={scrollToFormSection}
+        >
+          <Typography variant="body2" component="span">
+            Contacto
+          </Typography>
+        </a>
+      </>
+    );
+  };
+
   return (
     <React.Fragment>
       <AppBar
@@ -109,6 +157,7 @@ const Navigation = () => {
                 <nav className={classes.desktopNav}>
                   <List className={classes.desktopNavItemsList}>
                     {navMenuList}
+                    {scrollToNavItems()}
                   </List>
                 </nav>
               </Grid>
@@ -159,7 +208,10 @@ const Navigation = () => {
             <CloseIcon />
           </IconButton>
         </div>
-        <List className={classes.mobileNavItemsList}>{navMenuList}</List>
+        <List className={classes.mobileNavItemsList}>
+          {navMenuList}
+          {scrollToNavItems()}
+        </List>
       </SwipeableDrawer>
     </React.Fragment>
   );

@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     height: 300,
     width: "100%",
     position: "relative",
+    marginTop: 45,
     [theme.breakpoints.up("lg")]: {
       marginTop: 130,
       height: 360,

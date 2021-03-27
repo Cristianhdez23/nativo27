@@ -19,16 +19,4 @@ export const NAV_ITEMS = [
     title: "Cerritos",
     slug: "/cerritos",
   },
-  {
-    id: "ubicacion",
-    title: "Ubicacion",
-    // TODO: CHANGE TO SECCION
-    slug: "/ubicacion",
-  },
-  {
-    id: "contacto",
-    title: "Contacto",
-    // TODO: CHANGE TO SECCION
-    slug: "/contacto",
-  },
 ];

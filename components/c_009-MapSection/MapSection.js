@@ -10,7 +10,7 @@ import useStyles from "./styles";
 const MapSection = () => {
   const classes = useStyles();
   return (
-    <section className={classes.MapSection}>
+    <section className={classes.MapSection} name="scroll-to-map-section">
       <Grid container className={`${classes.mapSectionBlock} `}>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.mapBlock}>
           <article className={classes.mapContainer}>

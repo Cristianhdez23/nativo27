@@ -8,23 +8,8 @@ import useStyles from "./styles";
 const ContactForm = () => {
   const classes = useStyles();
 
-  const [inputsValue, setInputsValue] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-    mensaje: "",
-  });
-
-  const handleInputChange = (event) => {
-    event.persist();
-    setInputsValue((inputsValue) => ({
-      ...inputsValue,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
   return (
-    <section className={classes.ContactForm}>
+    <section className={classes.ContactForm} name="scroll-to-form-section">
       <Grid container className={classes.contactBlock}>
         <span className={`${classes.watermarkBlock}`}>
           <Image
