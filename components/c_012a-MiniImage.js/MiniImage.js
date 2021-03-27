@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "material-ui-image";
 import { Typography, Grid, Link } from "@material-ui/core";
 import useStyles from "./styles";
 
@@ -16,7 +17,16 @@ const MiniImage = ({ children, secondBlock }) => {
         secondBlock ? classes.imageSecondBlock : ""
       }`}
     >
-      {children}
+      <Image
+        src={"/photos/cerritos/img-two-section-cerritos.jpg"}
+        animationDuration={1000}
+        disableSpinner
+        style={{
+          paddingTop: "100% ",
+          width: "100%",
+          objectFit: "cover",
+        }}
+      />
     </Grid>
   );
 };
