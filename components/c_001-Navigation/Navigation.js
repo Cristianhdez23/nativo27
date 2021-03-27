@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-
 import { scroller } from "react-scroll";
-
 import Link from "next/link";
 import {
   Grid,
@@ -74,20 +72,22 @@ const Navigation = () => {
 
   const scrollToMapSection = () => {
     scroller.scrollTo("scroll-to-map-section", {
-      duration: 800,
+      duration: 1100,
       delay: 0,
-      smooth: "easeInOutQuart",
+      smooth: true,
       offset: isMediumScreen ? -220 : -80,
     });
+    handleDrawerClose();
   };
 
   const scrollToFormSection = () => {
     scroller.scrollTo("scroll-to-form-section", {
-      duration: 800,
+      duration: 1100,
       delay: 0,
-      smooth: "easeInOutQuart",
+      smooth: true,
       offset: isMediumScreen ? -220 : -80,
     });
+    handleDrawerClose();
   };
 
   const scrollToNavItems = () => {

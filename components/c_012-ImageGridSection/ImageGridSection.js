@@ -2,10 +2,31 @@ import React from "react";
 import Image from "material-ui-image";
 import MiniImage from "../c_012a-MiniImage.js/MiniImage";
 import { Typography, Grid } from "@material-ui/core";
+// --||----||----|| JSON DATA ||----||----||-- //
+import { FIRST_GRID_DATA } from "../../jsonData/naturaleza/2-FirstGridData";
+import { SECOND_GRID_DATA } from "../../jsonData/naturaleza/2.1-FirstGridData";
+
+// --||----||----|| JSON DATA ||----||----||-- //
 import useStyles from "./styles";
 
 const ImageGridSection = () => {
   const classes = useStyles();
+
+  const componentProps = {
+    item: true,
+    xs: 12,
+    sm: 12,
+    md: 12,
+    xl: 5,
+  };
+
+  const firstSetImage = FIRST_GRID_DATA.map(({ slug }, index) => {
+    return <MiniImage imageSrc={slug} key={index} />;
+  });
+
+  const secondSetImage = SECOND_GRID_DATA.map(({ slug }, index) => {
+    return <MiniImage secondBlock imageSrc={slug} key={index} />;
+  });
 
   return (
     <section className={classes.ImageGridSection}>
@@ -18,16 +39,9 @@ const ImageGridSection = () => {
         container
         className={`${classes.GeneralImagesGrid} ${classes.FirstGeneralImagesGrid}`}
       >
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          xl={5}
-          className={classes.ImagesContainer}
-        >
+        <Grid {...componentProps} className={classes.ImagesContainer}>
           <Image
-            src={"/photos/cerritos/img-two-section-cerritos.jpg"}
+            src={"/photos/naturaleza/2-Grid-Image.jpg"}
             animationDuration={1000}
             disableSpinner
             style={{
@@ -37,49 +51,22 @@ const ImageGridSection = () => {
             }}
           />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          xl={5}
-          className={classes.SecondImagesContainer}
-        >
+        <Grid {...componentProps} className={classes.SecondImagesContainer}>
           <Grid container className={classes.MiniImagesContainer}>
-            <MiniImage>A1</MiniImage>
-            <MiniImage>A2</MiniImage>
-            <MiniImage>A3</MiniImage>
-            <MiniImage>A4</MiniImage>
+            {firstSetImage}
           </Grid>
         </Grid>
       </Grid>
 
       <Grid container className={`${classes.GeneralImagesGrid}`}>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          xl={5}
-          className={classes.SecondImagesContainer}
-        >
+        <Grid {...componentProps} className={classes.SecondImagesContainer}>
           <Grid container className={classes.MiniImagesContainer}>
-            <MiniImage secondBlock>A1</MiniImage>
-            <MiniImage secondBlock>A2</MiniImage>
-            <MiniImage secondBlock>A3</MiniImage>
-            <MiniImage secondBlock>A4</MiniImage>
+            {secondSetImage}
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          xl={5}
-          className={classes.ImagesContainer}
-        >
+        <Grid {...componentProps} className={classes.ImagesContainer}>
           <Image
-            src={"/photos/cerritos/img-two-section-cerritos.jpg"}
+            src={"/photos/naturaleza/7-Grid-Image.jpg"}
             animationDuration={1000}
             disableSpinner
             style={{

@@ -27,7 +27,7 @@ const HomePage = () => {
       <CarouselBanner color="primary" data={BANNER_DATA} />
 
       <ImageSection
-        srcImage="/photos/cerritos/img-section-cerritos.jpg"
+        srcImage="/photos/homepage/2-Image-Section.jpg"
         isImageToLeft
         data={SECOND_IMAGE_SECTION_DATA}
       />
@@ -35,7 +35,7 @@ const HomePage = () => {
       <BigCardSection />
 
       <ImageSection
-        srcImage="/photos/cerritos/img-two-section-cerritos.jpg"
+        srcImage="/photos/homepage/4-Image-Section.jpg"
         isImageToRight
         data={THIRD_IMAGE_SECTION_DATA}
       />
@@ -43,6 +43,12 @@ const HomePage = () => {
       <DividerSection color="tertiary" data={DIVIDER_DATA_HOMEPAGE} />
 
       <MapSection />
+
+      <DividerSection
+        srcImage="/photos/homepage/5-Divider-Section.jpg"
+        useImageOnly
+      />
+
       <ContactForm />
       <Footer />
     </main>

@@ -120,8 +120,11 @@ export default makeStyles((theme) => ({
       width: 400,
       height: 400,
     },
+    "& > div": {
+      backgroundColor: `transparent !important`,
+    }
   },
   watermark: {
-    backgroundColor: theme.palette.background.main,
+    backgroundColor: theme.palette.background.transparent,
   },
 }));

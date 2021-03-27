@@ -13,7 +13,7 @@ const BigCardSection = () => {
       <article className={`${classes.imageSection} ${classes.firstImage}`}>
         <div className={classes.imgContainer}>
           <Image
-            src="/photos/arquitectura/bg-arquitectura.jpg"
+            src="/photos/homepage/3-First-Image.jpg"
             animationDuration={1000}
             disableSpinner
             style={{
@@ -34,7 +34,7 @@ const BigCardSection = () => {
       {/* Second */}
       <article className={`${classes.imageSection} ${classes.secondImage}`}>
         <Image
-          src="/photos/cerritos/img-two-section-cerritos.jpg"
+          src="/photos/homepage/3-Second-Image.jpg"
           animationDuration={1000}
           disableSpinner
           style={{
@@ -55,7 +55,7 @@ const BigCardSection = () => {
       {/* Third */}
       <article className={`${classes.imageSection} ${classes.thirdIimage}`}>
         <Image
-          src="/photos/naturaleza/bg-naturaleza.jpg"
+          src="/photos/homepage/3-Third-Image.jpg"
           animationDuration={1000}
           disableSpinner
           style={{

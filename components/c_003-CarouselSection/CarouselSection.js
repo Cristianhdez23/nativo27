@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "material-ui-image";
 import Carousel from "react-material-ui-carousel";
+import { CAROUSEL_IMAGES_DATA } from "../../jsonData/arquitectura/2.2-carouselImagesData";
+import { DISCLAIMER_DATA } from "../../jsonData/arquitectura/2.3-disclaimerData";
 import { Grid, Button, Typography } from "@material-ui/core";
 import { SITE_TITLE } from "../../constants/constants";
 import {
@@ -12,6 +14,32 @@ import useStyles from "./styles";
 
 const CarouselSection = ({ data }) => {
   const classes = useStyles();
+
+  const carouselImages = CAROUSEL_IMAGES_DATA.map(({ slug }, index) => {
+    return (
+      <div className={classes.carouselItem} key={index}>
+        <Image
+          src={slug}
+          animationDuration={1000}
+          disableSpinner
+          style={{
+            paddingTop: "0",
+            height: "100%",
+            width: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+    );
+  });
+
+  const disclaimerData = DISCLAIMER_DATA.map(({ description }, index) => {
+    return (
+      <Typography component="p" className={classes.disclaimer}>
+        {description}
+      </Typography>
+    );
+  });
   return (
     <section className={classes.carouselSection}>
       <Grid container className={`${classes.carouselSectionBlock} `}>
@@ -55,38 +83,9 @@ const CarouselSection = ({ data }) => {
               );
             }}
           >
-            <div className={classes.carouselItem}>
-              <Image
-                src="/photos/cerritos/bg-cerritos.jpg"
-                animationDuration={1000}
-                disableSpinner
-                style={{
-                  paddingTop: "0",
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            <div className={classes.carouselItem}>
-              <Image
-                src="/photos/cerritos/bg-cerritos.jpg"
-                animationDuration={1000}
-                disableSpinner
-                style={{
-                  paddingTop: "0",
-                  height: "100%",
-                  width: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
+            {carouselImages}
           </Carousel>
-          <Typography component="p" className={classes.disclaimer}>
-            *Las imágenes y planos son representación arquitectónica del
-            proyecto, pueden estar sujetas a modificaciones sin previo aviso.
-            Áreas aproximadas.
-          </Typography>
+          {disclaimerData}
         </Grid>
 
         <Grid item xs={12} sm={12} md={12} lg={5}>

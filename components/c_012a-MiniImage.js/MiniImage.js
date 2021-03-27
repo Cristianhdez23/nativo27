@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "material-ui-image";
-import { Typography, Grid, Link } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import useStyles from "./styles";
 
-const MiniImage = ({ children, secondBlock }) => {
+const MiniImage = ({ secondBlock, imageSrc }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -18,7 +18,7 @@ const MiniImage = ({ children, secondBlock }) => {
       }`}
     >
       <Image
-        src={"/photos/cerritos/img-two-section-cerritos.jpg"}
+        src={imageSrc}
         animationDuration={1000}
         disableSpinner
         style={{

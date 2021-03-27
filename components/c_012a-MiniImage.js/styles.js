@@ -3,27 +3,27 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   secondImage: {
     boxSizing: "border-box",
-    overflow: "hidden",
     cursor: "pointer",
     [theme.breakpoints.up("md")]: {
+      overflow: "hidden",
       paddingBottom: 0,
       maxWidth: 250,
       maxHeight: 250,
       margin: 5,
+      "& > div > img": {
+        transition: "transform .5s ease !important",
+      },
+      "&:hover": {
+        "& > div > img": {
+          transform: "scale(1.2)",
+        },
+      },
     },
     [theme.breakpoints.up("xl")]: {
       margin: 5,
       maxWidth: 300,
       maxHeight: 300,
       height: 700,
-    },
-    "& > div > img": {
-      transition: "transform .5s ease !important",
-    },
-    "&:hover": {
-      "& > div > img": {
-        transform: "scale(1.2)",
-      },
     },
   },
   imageSecondBlock: {

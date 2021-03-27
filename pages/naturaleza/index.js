@@ -20,7 +20,7 @@ const Naturaleza = () => {
       </Head>
 
       <ImageBanner
-        srcImage="/photos/naturaleza/bg-naturaleza.jpg"
+        srcImage="/photos/naturaleza/1-Banner-Image.jpg"
         color="secondary"
         data={BANNER_DATA}
       />

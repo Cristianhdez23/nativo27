@@ -80,7 +80,6 @@ export default makeStyles((theme) => ({
     },
   },
   ImagesContainer: {
-    overflow: "hidden",
     cursor: "pointer",
     order: 1,
     maxWidth: 500,
@@ -88,11 +87,20 @@ export default makeStyles((theme) => ({
     marginTop: 10,
     marginBottom: 10,
     [theme.breakpoints.up("md")]: {
+      overflow: "hidden",
       marginTop: 0,
       marginBottom: 0,
       marginRight: 5,
       maxWidth: 510,
       maxHeight: 510,
+      "& > div > img": {
+        transition: "transform .5s ease !important",
+      },
+      "&:hover": {
+        "& > div > img": {
+          transform: "scale(1.2)",
+        },
+      },
     },
     [theme.breakpoints.up("xl")]: {
       marginRight: 5,
@@ -103,14 +111,6 @@ export default makeStyles((theme) => ({
       marginRight: 0,
       marginTop: 5,
       marginBottom: 5,
-    },
-    "& > div > img": {
-      transition: "transform .5s ease !important",
-    },
-    "&:hover": {
-      "& > div > img": {
-        transform: "scale(1.2)",
-      },
     },
   },
 

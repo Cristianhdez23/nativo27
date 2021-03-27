@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "material-ui-image";
+import { DISCLAIMER_DATA } from "../../jsonData/arquitectura/2.3-disclaimerData";
 import { SITE_TITLE } from "../../constants/constants";
 import { Typography, Grid, Tabs, Tab } from "@material-ui/core";
 
@@ -19,6 +20,14 @@ const TabsSection = ({ data }) => {
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
+
+  const disclaimerData = DISCLAIMER_DATA.map(({ description }, index) => {
+    return (
+      <Typography component="p" className={classes.disclaimer}>
+        {description}
+      </Typography>
+    );
+  });
 
   return (
     <section className={classes.TabsSection}>
@@ -105,11 +114,7 @@ const TabsSection = ({ data }) => {
                       }}
                     />
                   </article>
-                  <Typography component="p" className={classes.disclaimer}>
-                    *Las imágenes y planos son representación arquitectónica del
-                    proyecto, pueden estar sujetas a modificaciones sin previo
-                    aviso. Áreas aproximadas.
-                  </Typography>
+                  {disclaimerData}
                 </Grid>
               </Grid>
             )}

@@ -22,24 +22,24 @@ const Cerritos = () => {
       </Head>
 
       <ImageBanner
-        srcImage="/photos/cerritos/bg-cerritos.jpg"
+        srcImage="/photos/cerritos/1-Banner-Image.jpg"
         color="primary"
         data={BANNER_DATA}
       />
 
       <ImageSection
-        srcImage="/photos/cerritos/img-section-cerritos.jpg"
+        srcImage="/photos/cerritos/2-Section-Image.jpg"
         isImageToLeft
         data={SECOND_IMAGE_SECTION_DATA}
       />
 
       <DividerSection
-        srcImage="/photos/2020_Blizzconline_Zoom_background_WOW_01.jpeg"
+        srcImage="/photos/cerritos/3-Divider-Image.jpg"
         useImageOnly
       />
 
       <ImageSection
-        srcImage="/photos/cerritos/img-two-section-cerritos.jpg"
+        srcImage="/photos/cerritos/4-Section-Image.jpg"
         isImageToRight
         data={THIRD_IMAGE_SECTION_DATA}
       />

@@ -30,7 +30,7 @@ const CarouselBanner = ({ data, color }) => {
         >
           <article className={classes.carouselItem}>
             <Image
-              src="/photos/cerritos/bg-cerritos.jpg"
+              src="/photos/homepage/1-Banner-Naturaleza.jpg"
               animationDuration={1000}
               disableSpinner
               style={{
@@ -43,7 +43,7 @@ const CarouselBanner = ({ data, color }) => {
           </article>
           <article className={classes.carouselItem}>
             <Image
-              src="/photos/cerritos/img-two-section-cerritos.jpg"
+              src="/photos/homepage/1-Banner-Arquitectura.jpg"
               animationDuration={1000}
               disableSpinner
               style={{
@@ -56,7 +56,7 @@ const CarouselBanner = ({ data, color }) => {
           </article>
           <article className={classes.carouselItem}>
             <Image
-              src="/photos/cerritos/img-two-section-cerritos.jpg"
+              src="/photos/homepage/1-Banner-Cerritos.jpg"
               animationDuration={1000}
               disableSpinner
               style={{

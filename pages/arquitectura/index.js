@@ -23,7 +23,7 @@ const Arquitectura = () => {
       </Head>
 
       <ImageBanner
-        srcImage="/photos/arquitectura/bg-arquitectura.jpg"
+        srcImage="/photos/arquitectura/1-Banner-Image.jpg"
         color="tertiary"
         data={BANNER_DATA}
       />
@@ -33,6 +33,11 @@ const Arquitectura = () => {
       <DividerSection color="secondary" data={DIVIDER_DATA_ARQUITECTURA} />
 
       <TabsSection data={TABS_SECTION} />
+
+      <DividerSection
+        srcImage="/photos/arquitectura/5-Divider-Image.jpg"
+        useImageOnly
+      />
 
       <MapSection />
       <ContactForm />
