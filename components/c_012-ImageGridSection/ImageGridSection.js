@@ -90,6 +90,34 @@ const ImageGridSection = () => {
           />
         </Grid>
       </Grid>
+      <Grid container className={classes.GeneralImagesGrid}>
+        <Grid
+          item
+          xs={12}
+          xl={5}
+          className={`${classes.ImagesContainer} ${classes.auxBox}`}
+        />
+        <Grid item xs={12} xl={5} className={classes.ImagesContainer}>
+          <Typography variant="body1" component="p" className={classes.takenBy}>
+            *Fotografías tomadas por Camila Mejía
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid container className={classes.GeneralImagesGrid}>
+        <Grid item xs={12} sm={9} lg={8}>
+          <Typography
+            variant="body1"
+            component="p"
+            className={classes.paragraph}
+          >
+            Región extensa en biodiversidad de Colombia, cuenta con 22.645
+            registros biológicos con 3.592 especies en flora y fauna. Pereira es
+            una de las mayores áreas de bosques en la ecorregión cafetera. La
+            zona permite la realización de actividades como el avistamiento de
+            aves, las caminatas ecológicas y el ciclomontañismo.
+          </Typography>
+        </Grid>
+      </Grid>
     </section>
   );
 };

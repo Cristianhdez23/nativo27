@@ -198,7 +198,7 @@ export default makeStyles((theme) => ({
   disclaimer: {
     display: "flex",
     margin: "10px auto 0 auto",
-    color: theme.palette.lines.border,
+    color: theme.palette.text.light,
     letterSpacing: "0.5px",
     textAlign: 'justify',
     fontSize: rem(8),

@@ -104,4 +104,27 @@ export default makeStyles((theme) => ({
       },
     },
   },
+  takenBy: {
+    fontSize: rem(10),
+    color: theme.palette.text.light,
+    textAlign: "end",
+    [theme.breakpoints.up("md")]: {
+      fontSize: rem(12),
+    },
+  },
+  auxBox: {
+    margin: 0,
+  },
+  paragraph: {
+    color: theme.palette.text.light,
+    textAlign: "center",
+    fontWeight: 300,
+    marginTop: 20,
+    fontSize: rem(14),
+    letterSpacing: 1,
+    [theme.breakpoints.up("md")]: {
+      marginTop: 50,
+      fontSize: rem(18),
+    },
+  },
 }));
