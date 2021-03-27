@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/styles";
 import { rem, BACKDROP_BACKGROUND_TWO } from "../../constants/constants";
 
 export default makeStyles((theme) => ({
-  Footer: {
+  BigCardSection: {
     position: "relative",
     display: "flex",
     flexDirection: "column",
@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     margin: "45px 20px 0 20px",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       height: "90vh",
       flexDirection: "row",
       margin: "130px 0 0 0",
@@ -22,7 +22,11 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     backgroundColor: "red",
     boxSizing: "border-box",
-    [theme.breakpoints.up("lg")]: {
+    height: 180,
+    width: "100%",
+    marginBottom: 3,
+    [theme.breakpoints.up("md")]: {
+      marginBottom: 0,
       height: "90vh",
       width: "calc(100% / 3)",
       "&:hover": {
@@ -32,13 +36,13 @@ export default makeStyles((theme) => ({
     },
   },
   imgContainer: {
-    position: 'relative',
-    width: '100%',
-    height: '100%'
+    position: "relative",
+    width: "100%",
+    height: "100%",
   },
   firstImage: {
-    marginRight: 3,
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
+      marginRight: 3,
       "&:after": {
         zIndex: 2,
         content: '""',
@@ -59,8 +63,8 @@ export default makeStyles((theme) => ({
     },
   },
   secondImage: {
-    margin: "0 3px",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
+      margin: "0 3px",
       "&:after": {
         zIndex: 2,
         content: '""',
@@ -81,8 +85,8 @@ export default makeStyles((theme) => ({
     },
   },
   thirdIimage: {
-    marginLeft: 3,
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
+      marginLeft: 3,
       "&:after": {
         zIndex: 2,
         content: '""',
@@ -108,12 +112,18 @@ export default makeStyles((theme) => ({
     fontWeight: "bold",
     display: "flex",
     flexDirection: "column",
-    fontSize: rem(35),
+    fontSize: rem(24),
     zIndex: 12,
     "& > span": {
       height: 22,
       fontWeight: 400,
-      fontSize: rem(26),
+      fontSize: rem(19),
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: rem(35),
+      "& > span": {
+        fontSize: rem(26),
+      },
     },
   },
   firsText: {

@@ -7,7 +7,7 @@ import { SITE_TITLE } from "../../constants/constants";
 
 import useStyles from "./styles";
 
-const MapSection = ({ data }) => {
+const MapSection = () => {
   const classes = useStyles();
   return (
     <section className={classes.MapSection}>

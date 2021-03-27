@@ -3,6 +3,8 @@ import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
 import CarouselSection from "../../components/c_003-CarouselSection/CarouselSection";
 import DividerSection from "../../components/c_004-DividerSection/DividerSection";
 import TabsSection from "../../components/c_007-TabsSection/TabsSection";
+import MapSection from "../../components/c_009-MapSection/MapSection";
+import ContactForm from "../../components/c_010-ContactForm/ContactForm";
 import Footer from "../../components/c_008-Footer/Footer";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../../jsonData/arquitectura/1-bannerData";
@@ -31,6 +33,9 @@ const Arquitectura = () => {
       <DividerSection color="secondary" data={DIVIDER_DATA_ARQUITECTURA} />
 
       <TabsSection data={TABS_SECTION} />
+
+      <MapSection />
+      <ContactForm />
 
       <Footer />
     </main>

@@ -25,7 +25,7 @@ export default makeStyles((theme) => ({
     letterSpacing: 3,
     fontSize: rem(14),
     [theme.breakpoints.up("md")]: {
-      fontSize: rem(16),
+      fontSize: rem(25),
     },
   },
   GeneralImagesGrid: {
@@ -108,6 +108,7 @@ export default makeStyles((theme) => ({
     fontSize: rem(10),
     color: theme.palette.text.light,
     textAlign: "end",
+    letterSpacing: 1,
     [theme.breakpoints.up("md")]: {
       fontSize: rem(12),
     },

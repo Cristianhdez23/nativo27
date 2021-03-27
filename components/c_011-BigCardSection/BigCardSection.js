@@ -9,7 +9,8 @@ const BigCardSection = () => {
   const classes = useStyles();
 // TODO: FIX CSS AND HTML CODE TO MAKE IT BETTER 
   return (
-    <section className={classes.Footer}>
+    <section className={classes.BigCardSection}>
+      {/* First */}
       <article className={`${classes.imageSection} ${classes.firstImage}`}>
         <div className={classes.imgContainer}>
           <Image
@@ -31,6 +32,7 @@ const BigCardSection = () => {
           <span>Casas Modernas</span>Y Dinamicas
         </Typography>
       </article>
+      {/* Second */}
       <article className={`${classes.imageSection} ${classes.secondImage}`}>
         <Image
           src="/photos/cerritos/img-two-section-cerritos.jpg"
@@ -51,6 +53,7 @@ const BigCardSection = () => {
           naturaleza
         </Typography>
       </article>
+      {/* Third */}
       <article className={`${classes.imageSection} ${classes.thirdIimage}`}>
         <Image
           src="/photos/naturaleza/bg-naturaleza.jpg"

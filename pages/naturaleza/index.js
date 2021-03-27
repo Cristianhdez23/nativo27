@@ -2,6 +2,8 @@ import Head from "next/head";
 import ImageBanner from "../../components/c_002-ImageBanner/ImageBanner";
 import DividerSection from "../../components/c_004-DividerSection/DividerSection";
 import ImageGridSection from "../../components/c_012-ImageGridSection/ImageGridSection";
+import MapSection from "../../components/c_009-MapSection/MapSection";
+import ContactForm from "../../components/c_010-ContactForm/ContactForm";
 import Footer from "../../components/c_008-Footer/Footer";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../../jsonData/naturaleza/1-bannerData";
@@ -25,6 +27,9 @@ const Naturaleza = () => {
       <ImageGridSection />
 
       <DividerSection color="primary" data={DIVIDER_DATA_NATURALEZA} />
+
+      <MapSection />
+      <ContactForm />
 
       <Footer />
     </main>

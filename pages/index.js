@@ -42,7 +42,7 @@ const HomePage = () => {
 
       <DividerSection color="tertiary" data={DIVIDER_DATA_HOMEPAGE} />
 
-      <MapSection data={SECOND_IMAGE_SECTION_DATA} />
+      <MapSection />
       <ContactForm />
       <Footer />
     </main>
