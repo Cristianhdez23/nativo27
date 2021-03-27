@@ -77,6 +77,12 @@ export default makeStyles((theme) => ({
       color: ICON_COLOR,
       fontSize: rem(22),
     },
+    "&:hover": {
+      backgroundColor: theme.palette.primary.main,
+      "& > svg": {
+        color: ICON_COLOR,
+      },
+    },
   },
   footerImage: {
     display: "flex",

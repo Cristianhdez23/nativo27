@@ -51,7 +51,7 @@ export default makeStyles((theme) => ({
         right: 0,
         width: 0,
         height: "100%",
-        background: theme.palette.primary.gray,
+        backgroundImage: "url(/photos/arquitectura/bg-arquitectura.jpg)",
         transition: "width .3s ease-in",
       },
       "&:hover": {
@@ -73,7 +73,7 @@ export default makeStyles((theme) => ({
         right: 0,
         width: 0,
         height: "100%",
-        background: theme.palette.primary.light,
+        backgroundImage: "url(/photos/cerritos/img-two-section-cerritos.jpg)",
         transition: "width .3s ease-in",
       },
       "&:hover": {
@@ -95,7 +95,7 @@ export default makeStyles((theme) => ({
         right: 0,
         width: 0,
         height: "100%",
-        background: theme.palette.primary.main,
+        backgroundImage: "url(/photos/naturaleza/bg-naturaleza.jpg)",
         transition: "width .3s ease-in",
       },
       "&:hover": {

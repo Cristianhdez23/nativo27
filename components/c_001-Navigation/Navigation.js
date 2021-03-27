@@ -27,6 +27,7 @@ const Navigation = () => {
   const [shadow, setShadow] = React.useState(0);
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   const getBodyScrollTop = () => {
     const el = document.scrollingElement || document.documentElement;
@@ -76,7 +77,7 @@ const Navigation = () => {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -80,
+      offset: isMediumScreen ? -220 : -80,
     });
   };
 
@@ -85,7 +86,7 @@ const Navigation = () => {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -80,
+      offset: isMediumScreen ? -220 : -80,
     });
   };
 

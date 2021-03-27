@@ -25,7 +25,42 @@ export default makeStyles((theme) => ({
     letterSpacing: 3,
     fontSize: rem(14),
     [theme.breakpoints.up("md")]: {
+      height: 31,
       fontSize: rem(25),
+      "&:after": {
+        content: '""',
+        position: "absolute",
+        top: "50%",
+        right: -75,
+        transform: "translateY(-50%)",
+        width: 65,
+        height: 4,
+        background: theme.palette.primary.main,
+        transition: "width .3s",
+      },
+      "&:before": {
+        content: '""',
+        position: "absolute",
+        top: "50%",
+        left: -75,
+        transform: "translateY(-50%)",
+        width: 65,
+        height: 4,
+        background: theme.palette.primary.main,
+        transition: "width .3s",
+      },
+    },
+    [theme.breakpoints.up("lg")]: {
+      "&:after": {
+        content: '""',
+        width: 105,
+        right: -115,
+      },
+      "&:before": {
+        content: '""',
+        width: 105,
+        left: -115,
+      },
     },
   },
   GeneralImagesGrid: {
@@ -45,6 +80,8 @@ export default makeStyles((theme) => ({
     },
   },
   ImagesContainer: {
+    overflow: "hidden",
+    cursor: "pointer",
     order: 1,
     maxWidth: 500,
     maxHeight: 500,
@@ -66,6 +103,14 @@ export default makeStyles((theme) => ({
       marginRight: 0,
       marginTop: 5,
       marginBottom: 5,
+    },
+    "& > div > img": {
+      transition: "transform .5s ease !important",
+    },
+    "&:hover": {
+      "& > div > img": {
+        transform: "scale(1.2)",
+      },
     },
   },
 

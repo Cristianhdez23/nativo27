@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "material-ui-image";
-import { FOOTER_DATA } from "../../jsonData/1-footerData";
-import { Typography, Grid, Link } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 import useStyles from "./styles";
 
 const BigCardSection = () => {
   const classes = useStyles();
-// TODO: FIX CSS AND HTML CODE TO MAKE IT BETTER 
+
   return (
     <section className={classes.BigCardSection}>
       {/* First */}
