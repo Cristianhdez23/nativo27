@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Image from "material-ui-image";
+import { useRouter } from "next/router";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import { SITE_TITLE } from "../../constants/constants";
 
@@ -7,6 +7,7 @@ import useStyles from "./styles";
 
 const ContactForm = () => {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <section className={classes.ContactForm} name="scroll-to-form-section">
@@ -34,6 +35,7 @@ const ContactForm = () => {
             name="contact"
             method="post"
             data-netlify-recaptcha="true"
+            action={`${router.pathname}?success=true`}
           >
             <input type="hidden" name="form-name" value="contact" />
             <TextField

@@ -3,7 +3,7 @@ import Image from "material-ui-image";
 import { Grid } from "@material-ui/core";
 import useStyles from "./styles";
 
-const MiniImage = ({ secondBlock, imageSrc }) => {
+const MiniImage = ({ secondBlock, srcImage, handleGridImageClick }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -16,9 +16,10 @@ const MiniImage = ({ secondBlock, imageSrc }) => {
       className={`${classes.secondImage} ${
         secondBlock ? classes.imageSecondBlock : ""
       }`}
+      onClick={() => handleGridImageClick(srcImage)}
     >
       <Image
-        src={imageSrc}
+        src={srcImage}
         animationDuration={1000}
         disableSpinner
         style={{

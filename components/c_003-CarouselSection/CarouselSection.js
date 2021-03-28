@@ -35,7 +35,7 @@ const CarouselSection = ({ data }) => {
 
   const disclaimerData = DISCLAIMER_DATA.map(({ description }, index) => {
     return (
-      <Typography component="p" className={classes.disclaimer}>
+      <Typography key={index} component="p" className={classes.disclaimer}>
         {description}
       </Typography>
     );
