@@ -35,6 +35,7 @@ const ContactForm = () => {
             name="contact"
             method="post"
             data-netlify-recaptcha="true"
+            action="/"
           >
             <input type="hidden" name="form-name" value="contact" />
             <TextField
