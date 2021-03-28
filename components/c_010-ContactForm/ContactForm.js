@@ -35,7 +35,7 @@ const ContactForm = () => {
             name="contact"
             method="post"
             data-netlify-recaptcha="true"
-            action={`${router.pathname}?success=true`}
+            action="/arquitectura"
           >
             <input type="hidden" name="form-name" value="contact" />
             <TextField
