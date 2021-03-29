@@ -94,7 +94,7 @@ export default makeStyles((theme) => ({
     color: theme.palette.text.contrastText,
     fontFamily: PRIMARY_FONT,
     textTransform: "uppercase",
-    fontSize: rem(15),
+    fontSize: rem(12),
   },
   InputLabelFocused: {
     color: `${theme.palette.text.light} !important`,

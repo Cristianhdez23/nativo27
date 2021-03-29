@@ -53,10 +53,14 @@ const ImageSection = ({ srcImage, isImageToRight, isImageToLeft, data }) => {
                   key={index}
                   variant="body1"
                   component="p"
-                  className={classes.paragraph}
+                  className={`${classes.paragraph} ${
+                    isImageToRight ? classes.paragraphisImageToRight : ""
+                  }`}
                 >
                   {title && (
-                    <span className={classes.paragraphTitle}>{title}</span>
+                    <span className={classes.paragraphTitle}>
+                      {title}&nbsp;
+                    </span>
                   )}
                   {description}
                 </Typography>

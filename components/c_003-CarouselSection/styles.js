@@ -36,10 +36,7 @@ export default makeStyles((theme) => ({
         maxWidth: 450,
       },
       [theme.breakpoints.up("lg")]: {
-        maxWidth: 400,
-      },
-      [theme.breakpoints.up("xl")]: {
-        maxWidth: 450,
+        maxWidth: 470,
       },
     },
 
@@ -57,10 +54,7 @@ export default makeStyles((theme) => ({
         maxWidth: 450,
       },
       [theme.breakpoints.up("lg")]: {
-        maxWidth: 400,
-      },
-      [theme.breakpoints.up("xl")]: {
-        maxWidth: 450,
+        maxWidth: 470,
       },
     },
   },
@@ -79,11 +73,7 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       height: 600,
-      maxWidth: 400,
-    },
-    [theme.breakpoints.up("xl")]: {
-      height: 650,
-      maxWidth: 450,
+      maxWidth: 470,
     },
   },
   indicatorContainer: {
@@ -106,10 +96,7 @@ export default makeStyles((theme) => ({
       maxWidth: 450,
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 400,
-    },
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 450,
+      maxWidth: 470,
     },
   },
   indicatorIcon: {
@@ -175,7 +162,6 @@ export default makeStyles((theme) => ({
   paragraph: {
     boxSizing: "border-box",
     position: "relative",
-    textAlign: "justify",
     color: theme.palette.text.light,
     paddingLeft: "12%",
     letterSpacing: 2,
@@ -186,7 +172,7 @@ export default makeStyles((theme) => ({
       top: "50%",
       left: 0,
       transform: "translateY(-50%)",
-      width: 5,
+      width: 3,
       height: "35%",
       backgroundColor: theme.palette.primary.dark,
     },
@@ -212,10 +198,7 @@ export default makeStyles((theme) => ({
       maxWidth: 450,
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 400,
-    },
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: 450,
+      maxWidth: 480,
     },
   },
   navButtons: {
@@ -249,7 +232,7 @@ export default makeStyles((theme) => ({
     fill: theme.palette.primary.dark,
     fontSize: rem(40),
     [theme.breakpoints.up("sm")]: {
-      fontSize: rem(65),
+      fontSize: rem(45),
     },
   },
   previousArrowIcon: {
@@ -257,7 +240,7 @@ export default makeStyles((theme) => ({
     fill: theme.palette.primary.dark,
     fontSize: rem(40),
     [theme.breakpoints.up("sm")]: {
-      fontSize: rem(65),
+      fontSize: rem(45),
     },
   },
 }));

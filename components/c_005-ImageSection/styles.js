@@ -94,24 +94,25 @@ export default makeStyles((theme) => ({
     flexDirection: 'column',
     boxSizing: "border-box",
     position: "relative",
-    textAlign: "justify",
     color: theme.palette.text.light,
     paddingLeft: "12%",
-    letterSpacing: 2,
-    lineHeight: "28px",
+    letterSpacing: '2px',
     "&:before": {
       content: '""',
       position: "absolute",
       top: "50%",
       left: 0,
       transform: "translateY(-50%)",
-      width: 5,
+      width: 3,
       height: "35%",
       backgroundColor: theme.palette.primary.dark,
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: rem(16),
     },
+  },
+  paragraphisImageToRight: {
+    display: 'block',
   },
   paragraphTitle: {
     fontWeight: 'bold'

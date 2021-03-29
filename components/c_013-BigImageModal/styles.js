@@ -12,7 +12,6 @@ export default makeStyles((theme) => ({
   modalPaper: {
     position: "relative",
     width: "100%",
-    maxWidth: 830,
     borderRadius: 0,
   },
   closeIconBtn: {

@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { rem } from "../../constants/constants";
 
 export default makeStyles((theme) => ({
   // ----||----|| Desktop Navbar Styles ||----||----
@@ -89,6 +90,9 @@ export default makeStyles((theme) => ({
     textTransform: "uppercase",
     "& > span": {
       color: "inherit",
+      [theme.breakpoints.up("md")]: {
+        fontSize: rem(16),
+      },
     },
     "&:after": {
       content: '""',

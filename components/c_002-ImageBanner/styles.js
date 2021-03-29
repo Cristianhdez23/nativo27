@@ -30,14 +30,13 @@ export default makeStyles((theme) => ({
     margin: '20px 20px 0 20px',
     padding: "25px 34px",
     position: "relative",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       width: "50%",
       zIndex: 2,
       position: "absolute",
       bottom: 0,
       right: 0,
-      margin: 0,
-      padding: "60px 50px",
+      margin: 0,  
       transform: "translateY(25%)",
     },
     "&.primary": {
@@ -52,7 +51,7 @@ export default makeStyles((theme) => ({
   },
   imageTitle: {
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(40),
+      fontSize: rem(30),
     },
   },
   imageParagraph: {
@@ -60,7 +59,6 @@ export default makeStyles((theme) => ({
       maxWidth: 250,
     },
     [theme.breakpoints.up("lg")]: {
-      letterSpacing: 1.5,
       fontSize: rem(21),
       maxWidth: 570,
     },

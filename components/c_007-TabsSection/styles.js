@@ -14,6 +14,12 @@ export default makeStyles((theme) => ({
     },
   },
   tabsBlock: {
+    [theme.breakpoints.up("lg")]: {
+      "& > div > div > button": {
+        minWidth: 180,
+        padding: '6px 18px',
+      },  
+    },
     "& > div > div > button:not(:first-child):not(:last-child)": {
       "&:after": {
         content: '""',
@@ -100,7 +106,6 @@ export default makeStyles((theme) => ({
     margin: "5px 15px 0 15px",
     color: theme.palette.lines.border,
     letterSpacing: "0.5px",
-    textAlign: "justify",
     fontSize: rem(8),
     [theme.breakpoints.up("sm")]: {
       margin: "5px auto 0 auto",
@@ -127,12 +132,12 @@ export default makeStyles((theme) => ({
       left: "50%",
       transform: "translateX(calc(-50%))",
       width: "70%",
-      height: 4,
+      height: 3,
       background: theme.palette.lines.dark,
     },
     [theme.breakpoints.up("lg")]: {
-      paddingBottom: 35,
-      fontSize: rem(35),
+      paddingBottom: 25,
+      fontSize: rem(23),
     },
   },
   TabDescription: {
@@ -147,8 +152,8 @@ export default makeStyles((theme) => ({
     letterSpacing: "3px",
     paddingTop: 20,
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(35),
-      paddingTop: 35,
+      fontSize: rem(23),
+      paddingTop: 25,
     },
   },
   watermarkBlock: {

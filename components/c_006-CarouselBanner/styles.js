@@ -157,7 +157,6 @@ export default makeStyles((theme) => ({
       bottom: 0,
       right: 0,
       margin: 0,
-      padding: "60px 50px",
       transform: "translateY(25%)",
     },
     "&.primary": {
@@ -172,7 +171,7 @@ export default makeStyles((theme) => ({
   },
   imageTitle: {
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(40),
+      fontSize: rem(30),
     },
   },
   imageParagraph: {
@@ -180,8 +179,7 @@ export default makeStyles((theme) => ({
       maxWidth: 250,
     },
     [theme.breakpoints.up("lg")]: {
-      letterSpacing: 1.5,
-      fontSize: rem(21),
+      fontSize: rem(20),
       maxWidth: 570,
     },
     [theme.breakpoints.up("xl")]: {

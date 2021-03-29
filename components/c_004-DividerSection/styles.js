@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     marginTop: 45,
     [theme.breakpoints.up("lg")]: {
       marginTop: 130,
-      height: 360,
+      height: 450,
     },
   },
   dividerTextBlock: {
@@ -94,8 +94,9 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    letterSpacing: "5px",
-    padding: "0 5px",
+    letterSpacing: "1.5px",
+    padding: "0 20px",
+    fontSize: rem(16),
     [theme.breakpoints.up("lg")]: {
       fontSize: rem(35),
     },

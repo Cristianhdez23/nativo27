@@ -7,8 +7,8 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       overflow: "hidden",
       paddingBottom: 0,
-      maxWidth: 250,
-      maxHeight: 250,
+      maxWidth: 225,
+      maxHeight: 225,
       margin: 5,
       "& > div > img": {
         transition: "transform .5s ease !important",

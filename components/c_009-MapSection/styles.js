@@ -82,7 +82,6 @@ export default makeStyles((theme) => ({
     flexDirection: "column",
     boxSizing: "border-box",
     position: "relative",
-    textAlign: "justify",
     color: theme.palette.text.light,
     letterSpacing: 1,
     lineHeight: "28px",
