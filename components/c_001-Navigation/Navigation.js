@@ -100,7 +100,7 @@ const Navigation = () => {
           onClick={scrollToMapSection}
         >
           <Typography variant="body2" component="span">
-            Ubicacion
+            Ubicación
           </Typography>
         </a>
         <a

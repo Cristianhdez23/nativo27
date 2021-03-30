@@ -46,13 +46,14 @@ export default makeStyles((theme) => ({
     width: 150,
     height: 150,
     [theme.breakpoints.up("lg")]: {
-      top: '-100%',
+      top: "-100%",
       width: 250,
       height: 250,
     },
   },
   watermarkRight: {
     right: -30,
+    zIndex: -1,
   },
   watermark: {
     backgroundColor: theme.palette.background.main,
@@ -72,6 +73,11 @@ export default makeStyles((theme) => ({
       top: 0,
       left: 0,
     },
+    [theme.breakpoints.up("md")]: {
+      "&:before": {
+        left: "20%",
+      },
+    },
     [theme.breakpoints.up("lg")]: {
       maxWidth: 400,
       fontSize: rem(26),
@@ -86,6 +92,10 @@ export default makeStyles((theme) => ({
     letterSpacing: 1,
     lineHeight: "28px",
     fontWeight: 400,
+    paddingLeft: 0,
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "20%",
+    },
     [theme.breakpoints.up("lg")]: {
       fontSize: rem(16),
       fontWeight: 300,

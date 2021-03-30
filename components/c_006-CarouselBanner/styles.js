@@ -119,7 +119,7 @@ export default makeStyles((theme) => ({
     color: theme.palette.primary.gray,
     position: "relative",
     marginLeft: 10,
-    marginBottom: 130,
+    marginBottom: 20,
     borderRadius: 0,
     "&:hover": {
       color: theme.palette.primary.white,
@@ -148,10 +148,11 @@ export default makeStyles((theme) => ({
   //
   informationBlock: {
     margin: "20px 20px 0 20px",
-    padding: "25px 34px",
+    padding: "35px 45px",
     position: "relative",
     [theme.breakpoints.up("lg")]: {
       width: "50%",
+      height: 220,
       zIndex: 2,
       position: "absolute",
       bottom: 0,
@@ -169,9 +170,15 @@ export default makeStyles((theme) => ({
       backgroundColor: theme.palette.secondary.main,
     },
   },
+  dataBlock:{
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
   imageTitle: {
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(30),
+      fontSize: rem(25),
     },
   },
   imageParagraph: {
@@ -179,7 +186,7 @@ export default makeStyles((theme) => ({
       maxWidth: 250,
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(20),
+      fontSize: rem(18),
       maxWidth: 570,
     },
     [theme.breakpoints.up("xl")]: {

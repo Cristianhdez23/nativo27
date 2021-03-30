@@ -3,7 +3,7 @@ import { rem } from "../../constants/constants";
 
 export default makeStyles((theme) => ({
   TabsSection: {
-    position: 'relative',
+    position: "relative",
     display: "flex",
     flexDirection: "column",
     width: "100%",
@@ -14,11 +14,15 @@ export default makeStyles((theme) => ({
     },
   },
   tabsBlock: {
+    "& > div > div > button": {
+      padding: "2px 15px",
+      fontSize: rem(14),
+    },
     [theme.breakpoints.up("lg")]: {
       "& > div > div > button": {
-        minWidth: 180,
-        padding: '6px 18px',
-      },  
+        minWidth: 220,
+        padding: "6px 20px",
+      },
     },
     "& > div > div > button:not(:first-child):not(:last-child)": {
       "&:after": {
@@ -47,7 +51,7 @@ export default makeStyles((theme) => ({
     display: "none",
   },
   Tab: {
-    fontWeight: "bold",
+    fontWeight: 800,
     letterSpacing: "1px",
     color: theme.palette.primary.gray,
     fontSize: rem(15),
@@ -120,8 +124,8 @@ export default makeStyles((theme) => ({
   TabTitle: {
     textTransform: "uppercase",
     color: theme.palette.lines.dark,
-    fontWeight: "bold",
-    fontSize: rem(23),
+    fontWeight: 800,
+    fontSize: rem(20),
     letterSpacing: "3px",
     position: "relative",
     paddingBottom: 20,
@@ -137,7 +141,6 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       paddingBottom: 25,
-      fontSize: rem(23),
     },
   },
   TabDescription: {
@@ -148,11 +151,10 @@ export default makeStyles((theme) => ({
     textTransform: "uppercase",
     color: theme.palette.primary.gray,
     fontWeight: "bold",
-    fontSize: rem(23),
+    fontSize: rem(20),
     letterSpacing: "3px",
     paddingTop: 20,
     [theme.breakpoints.up("lg")]: {
-      fontSize: rem(23),
       paddingTop: 25,
     },
   },
@@ -164,7 +166,7 @@ export default makeStyles((theme) => ({
     height: 110,
     zIndex: -1,
     [theme.breakpoints.up("lg")]: {
-      bottom: '60%',
+      bottom: "60%",
       left: 0,
       width: 250,
       height: 250,

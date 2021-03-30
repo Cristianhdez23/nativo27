@@ -72,7 +72,7 @@ const CarouselBanner = ({ data, color }) => {
       <section className={`${classes.informationBlock} ${color}`}>
         {data?.map(({ title, description }, index) => {
           return (
-            <article key={index}>
+            <article key={index} className={classes.dataBlock}>
               <Typography
                 variant="h2"
                 component="h2"

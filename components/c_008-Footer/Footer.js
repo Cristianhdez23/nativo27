@@ -19,7 +19,7 @@ const Footer = () => {
         <div className={classes.socialIcons}>
           <Link
             className={classes.iconClasses}
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/proyecto.nativo27/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,7 +27,7 @@ const Footer = () => {
           </Link>
           <Link
             className={classes.iconClasses}
-            href="https://www.instagram.com/"
+            href="https://www.facebook.com/proyecto.nativo27"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +35,7 @@ const Footer = () => {
           </Link>
           <Link
             className={classes.iconClasses}
-            href="https://www.instagram.com/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ const Footer = () => {
           </Link>
           <Link
             className={classes.iconClasses}
-            href="https://www.instagram.com/"
+            href="mailto:constructoresexpertossa@gmail.com?Subject=Nativo27"
             target="_blank"
             rel="noopener noreferrer"
           >

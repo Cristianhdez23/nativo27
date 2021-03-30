@@ -29,6 +29,7 @@ export default makeStyles((theme) => ({
     width: "100%",
   },
   titleContactSection: {
+    textAlign: "center",
     maxHeight: 78,
     textTransform: "uppercase",
     letterSpacing: "2px",
@@ -49,13 +50,13 @@ export default makeStyles((theme) => ({
       left: 0,
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 355,
-      fontSize: rem(35),
-      paddingLeft: "5%",
+      maxWidth: 290,
+      fontSize: rem(25),
+      paddingLeft: 0,
       marginLeft: "25%",
       marginRight: 0,
-      marginBottom: 90,
-      maxHeight: 307,
+      marginBottom: 95,
+      maxHeight: 280,
       paddingTop: 200,
     },
   },
@@ -122,7 +123,7 @@ export default makeStyles((theme) => ({
     },
     "& > div": {
       backgroundColor: `transparent !important`,
-    }
+    },
   },
   watermark: {
     backgroundColor: theme.palette.background.transparent,

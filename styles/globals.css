@@ -18,3 +18,8 @@
   src: url(/fonts/QuicheDisplay-Bold.otf);
   font-weight: bold;
 }
+@font-face {
+  font-family: 'quiche-display';
+  src: url(/fonts/QuicheDisplay-ExtraBold.otf);
+  font-weight: 800;
+}

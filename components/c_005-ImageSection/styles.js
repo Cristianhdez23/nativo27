@@ -97,6 +97,8 @@ export default makeStyles((theme) => ({
     color: theme.palette.text.light,
     paddingLeft: "12%",
     letterSpacing: '2px',
+    fontWeight: 400,
+    lineHeight: "20px",
     "&:before": {
       content: '""',
       position: "absolute",
@@ -109,10 +111,12 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       fontSize: rem(16),
+      lineHeight: "25px",
     },
   },
   paragraphisImageToRight: {
     display: 'block',
+    textAlign: 'left',
   },
   paragraphTitle: {
     fontWeight: 'bold'
