@@ -22,6 +22,7 @@ export default makeStyles((theme) => ({
       "& > div > div > button": {
         minWidth: 220,
         padding: "6px 20px",
+        fontSize: rem(18),
       },
     },
     "& > div > div > button:not(:first-child):not(:last-child)": {
