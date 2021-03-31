@@ -3,7 +3,7 @@ import Image from "material-ui-image";
 import { Grid } from "@material-ui/core";
 import useStyles from "./styles";
 
-const MiniImage = ({ secondBlock, srcImage, handleGridImageClick }) => {
+const MiniImage = ({ secondBlock, srcImage, handleGridImageClick, imageValue }) => {
   const classes = useStyles();
   return (
     <Grid
@@ -16,7 +16,7 @@ const MiniImage = ({ secondBlock, srcImage, handleGridImageClick }) => {
       className={`${classes.secondImage} ${
         secondBlock ? classes.imageSecondBlock : ""
       }`}
-      onClick={() => handleGridImageClick(srcImage)}
+      onClick={() => handleGridImageClick(imageValue)}
     >
       <Image
         src={srcImage}

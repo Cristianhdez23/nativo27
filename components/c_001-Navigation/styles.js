@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     top: "0",
     left: "0",
     width: "100vw",
-    zIndex: 1300,
+    zIndex: 999,
     boxShadow: "none",
     transition: theme.transitions.create(["background-color"], {
       easing: theme.transitions.easing.sharp,

@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "material-ui-image";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 import { Typography, Grid } from "@material-ui/core";
 import MiniImage from "../c_012a-MiniImage.js/MiniImage";
-import BigImageModal from "../c_013-BigImageModal/BigImageModal";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { FIRST_GRID_DATA } from "../../jsonData/naturaleza/2-FirstGridData";
 import { SECOND_GRID_DATA } from "../../jsonData/naturaleza/2.1-FirstGridData";
@@ -14,7 +15,18 @@ const ImageGridSection = () => {
   const [open, setOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState("");
 
+  const gridImages = ["/photos/naturaleza/2-Grid-Image.jpg"];
+
+  FIRST_GRID_DATA.map(({ slug }) => {
+    gridImages.push(slug);
+  });
+  gridImages.push("/photos/naturaleza/7-Grid-Image.jpg");
+  SECOND_GRID_DATA.map(({ slug }) => {
+    gridImages.push(slug);
+  });
+
   const handleGridImageClick = (value) => {
+    console.log("🚀", gridImages[value]);
     setSelectedImage(value);
     setOpen(true);
   };
@@ -31,13 +43,13 @@ const ImageGridSection = () => {
     xl: 5,
   };
 
-  const bigGridImage = (srcImage, index) => {
+  const bigGridImage = (srcImage, imageValue, index) => {
     return (
       <Grid
         key={index}
         {...componentProps}
         className={classes.ImagesContainer}
-        onClick={() => handleGridImageClick(srcImage)}
+        onClick={() => handleGridImageClick(imageValue)}
       >
         <Image
           src={srcImage}
@@ -52,23 +64,25 @@ const ImageGridSection = () => {
       </Grid>
     );
   };
-  const firstSetImage = FIRST_GRID_DATA.map(({ slug }, index) => {
+  const firstSetImage = FIRST_GRID_DATA.map(({ slug, value }, index) => {
     return (
       <MiniImage
         srcImage={slug}
         key={index}
         handleGridImageClick={handleGridImageClick}
+        imageValue={value}
       />
     );
   });
 
-  const secondSetImage = SECOND_GRID_DATA.map(({ slug }, index) => {
+  const secondSetImage = SECOND_GRID_DATA.map(({ slug, value }, index) => {
     return (
       <MiniImage
         secondBlock
         srcImage={slug}
         key={index}
         handleGridImageClick={handleGridImageClick}
+        imageValue={value}
       />
     );
   });
@@ -85,7 +99,7 @@ const ImageGridSection = () => {
           container
           className={`${classes.GeneralImagesGrid} ${classes.FirstGeneralImagesGrid}`}
         >
-          {bigGridImage("/photos/naturaleza/2-Grid-Image.jpg")}
+          {bigGridImage("/photos/naturaleza/2-Grid-Image.jpg", 0)}
           <Grid {...componentProps} className={classes.SecondImagesContainer}>
             <Grid container className={classes.MiniImagesContainer}>
               {firstSetImage}
@@ -99,7 +113,7 @@ const ImageGridSection = () => {
               {secondSetImage}
             </Grid>
           </Grid>
-          {bigGridImage("/photos/naturaleza/7-Grid-Image.jpg")}
+          {bigGridImage("/photos/naturaleza/7-Grid-Image.jpg", 5)}
         </Grid>
         <Grid container className={classes.GeneralImagesGrid}>
           <Grid
@@ -134,11 +148,27 @@ const ImageGridSection = () => {
           </Grid>
         </Grid>
       </section>
-      <BigImageModal
-        selectedImage={selectedImage}
-        open={open}
-        onClose={handleClose}
-      />
+      {open && (
+        <Lightbox
+          enableZoom={false}
+          mainSrc={gridImages[selectedImage]}
+          nextSrc={gridImages[(selectedImage + 1) % gridImages.length]}
+          prevSrc={
+            gridImages[
+              (selectedImage + gridImages.length - 1) % gridImages.length
+            ]
+          }
+          onCloseRequest={() => handleClose()}
+          onMovePrevRequest={() =>
+            setSelectedImage(
+              (selectedImage + gridImages.length - 1) % gridImages.length
+            )
+          }
+          onMoveNextRequest={() =>
+            setSelectedImage((selectedImage + 1) % gridImages.length)
+          }
+        />
+      )}
     </>
   );
 };
