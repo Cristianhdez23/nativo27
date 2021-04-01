@@ -29,7 +29,7 @@ export default makeStyles((theme) => ({
     width: "100%",
     height: "180px",
     position: "relative",
-    transition: "0.25s",
+    transition: "0.2s",
     marginBottom: 4,
     [theme.breakpoints.up("md")]: {
       marginBottom: 0,
@@ -81,7 +81,7 @@ export default makeStyles((theme) => ({
     width: "100%",
     textAlign: "center",
     height: 184,
-    "& > span": {
+    "& > a > span": {
       height: 22,
       fontWeight: 400,
       fontSize: rem(19),
@@ -94,7 +94,7 @@ export default makeStyles((theme) => ({
       top: "50%",
       height: 62,
       fontSize: rem(35),
-      "& > span": {
+      "& > a > span": {
         fontSize: rem(26),
       },
       "&:hover ~ section > article": {
@@ -104,7 +104,7 @@ export default makeStyles((theme) => ({
   },
   firsText: {
     letterSpacing: "7px",
-    "& > span": {
+    "& > a > span": {
       letterSpacing: "3.5px",
     },
     [theme.breakpoints.up("md")]: {
@@ -116,7 +116,7 @@ export default makeStyles((theme) => ({
   },
   secondText: {
     letterSpacing: "7px",
-    "& > span": {
+    "& > a > span": {
       letterSpacing: "2px",
     },
     [theme.breakpoints.down("md")]: {
@@ -133,7 +133,7 @@ export default makeStyles((theme) => ({
   },
   thridText: {
     letterSpacing: "8px",
-    "& > span": {
+    "& > a > span": {
       letterSpacing: "2.5px",
     },
     [theme.breakpoints.down("md")]: {
@@ -148,5 +148,11 @@ export default makeStyles((theme) => ({
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       },
     },
+  },
+  Link: {
+    display: 'flex',
+    flexDirection: 'column',
+    color: theme.palette.primary.white,
+    textDecoration: 'none',
   },
 }));

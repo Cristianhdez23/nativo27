@@ -7,38 +7,38 @@ const ThreeBigImageSection = () => {
 
   return (
     <section className={classes.ThreeBigImageSection}>
-      <Link href="/arquitectura">
-        <a>
-          <Typography
-            component="h4"
-            className={`${classes.ImageText} ${classes.firsText}`}
-          >
+      <Typography
+        component="h4"
+        className={`${classes.ImageText} ${classes.firsText}`}
+      >
+        <Link href="/arquitectura">
+          <a className={classes.Link}>
             <span>Casas Modernas</span>Y Dinamicas
-          </Typography>
-        </a>
-      </Link>
-      <Link href="/naturaleza">
-        <a>
-          <Typography
-            component="h4"
-            className={`${classes.ImageText} ${classes.secondText}`}
-          >
+          </a>
+        </Link>
+      </Typography>
+      <Typography
+        component="h4"
+        className={`${classes.ImageText} ${classes.secondText}`}
+      >
+        <Link href="/naturaleza">
+          <a className={classes.Link}>
             <span>Contacto con la</span>
             naturaleza
-          </Typography>
-        </a>
-      </Link>
-      <Link href="/cerritos">
-        <a>
-          <Typography
-            component="h4"
-            className={`${classes.ImageText} ${classes.thridText}`}
-          >
+          </a>
+        </Link>
+      </Typography>
+      <Typography
+        component="h4"
+        className={`${classes.ImageText} ${classes.thridText}`}
+      >
+        <Link href="/cerritos">
+          <a className={classes.Link}>
             <span>Sector el tigre</span>
             en Pereira
-          </Typography>
-        </a>
-      </Link>
+          </a>
+        </Link>
+      </Typography>
       <section className={classes.composition}>
         <article
           className={`big-image ${classes.Image} ${classes.FirstImage}`}
