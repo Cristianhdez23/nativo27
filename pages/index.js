@@ -15,8 +15,13 @@ import { THIRD_IMAGE_SECTION_DATA } from "../jsonData/homepage/3-imageSectionDat
 import { DIVIDER_DATA_HOMEPAGE } from "../jsonData/homepage/4-DividerSectionData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../styles/Home.module.css";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 const HomePage = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <main className={styles.container}>
       <Head>
@@ -45,7 +50,11 @@ const HomePage = () => {
       <MapSection />
 
       <DividerSection
-        srcImage="/photos/homepage/5-Divider-Section.jpg"
+        srcImage={
+          isSmallScreen
+            ? "/photos/homepage/5-Divider-Section.jpg"
+            : "/photos/homepage/5.1-Divider-Section.jpg"
+        }
         useImageOnly
       />
 
