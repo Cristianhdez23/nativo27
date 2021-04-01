@@ -8,6 +8,7 @@ import MapSection from "../components/c_009-MapSection/MapSection";
 import ContactForm from "../components/c_010-ContactForm/ContactForm";
 import BigCardSection from "../components/c_011-BigCardSection/BigCardSection";
 import Footer from "../components/c_008-Footer/Footer";
+import ThreeBigImageSection from "../components/c_013-ThreeBigImageSection/ThreeBigImageSection";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../jsonData/homepage/1-bannerData";
 import { SECOND_IMAGE_SECTION_DATA } from "../jsonData/homepage/2-imageSectionData";
@@ -51,6 +52,7 @@ const HomePage = () => {
 
       <ContactForm />
       <Footer />
+      <ThreeBigImageSection />
     </main>
   );
 };

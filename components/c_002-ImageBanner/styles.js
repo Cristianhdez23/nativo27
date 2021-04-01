@@ -30,7 +30,7 @@ export default makeStyles((theme) => ({
     margin: '20px 20px 0 20px',
     padding: "35px 45px",
     position: "relative",
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("lg")]: {
       width: "50%",
       height: 220,
       zIndex: 2,
