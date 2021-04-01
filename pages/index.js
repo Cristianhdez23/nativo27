@@ -6,9 +6,8 @@ import ImageSection from "../components/c_005-ImageSection/ImageSection";
 import DividerSection from "../components/c_004-DividerSection/DividerSection";
 import MapSection from "../components/c_009-MapSection/MapSection";
 import ContactForm from "../components/c_010-ContactForm/ContactForm";
-import BigCardSection from "../components/c_011-BigCardSection/BigCardSection";
-import Footer from "../components/c_008-Footer/Footer";
 import ThreeBigImageSection from "../components/c_013-ThreeBigImageSection/ThreeBigImageSection";
+import Footer from "../components/c_008-Footer/Footer";
 // --||----||----|| JSON DATA ||----||----||-- //
 import { BANNER_DATA } from "../jsonData/homepage/1-bannerData";
 import { SECOND_IMAGE_SECTION_DATA } from "../jsonData/homepage/2-imageSectionData";
@@ -33,7 +32,7 @@ const HomePage = () => {
         data={SECOND_IMAGE_SECTION_DATA}
       />
 
-      <BigCardSection />
+      <ThreeBigImageSection />
 
       <ImageSection
         srcImage="/photos/homepage/4-Image-Section.jpg"
@@ -52,7 +51,6 @@ const HomePage = () => {
 
       <ContactForm />
       <Footer />
-      <ThreeBigImageSection />
     </main>
   );
 };
