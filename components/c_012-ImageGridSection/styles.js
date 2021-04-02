@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     margin: "45px 20px 0 20px",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       margin: "150px 0 0 0",
     },
   },

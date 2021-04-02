@@ -10,8 +10,12 @@ import { BANNER_DATA } from "../../jsonData/naturaleza/1-bannerData";
 import { DIVIDER_DATA_NATURALEZA } from "../../jsonData/naturaleza/3-DividerSectionData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 const Naturaleza = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <main className={styles.container}>
       <Head>
@@ -20,7 +24,11 @@ const Naturaleza = () => {
       </Head>
 
       <ImageBanner
-        srcImage="/photos/naturaleza/1-Banner-Image.jpg"
+        srcImage={
+          isSmallScreen
+            ? "/photos/naturaleza/1.1-Banner-Image.jpg"
+            : "/photos/naturaleza/1-Banner-Image.jpg"
+        }
         color="secondary"
         data={BANNER_DATA}
       />

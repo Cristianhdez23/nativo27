@@ -8,7 +8,7 @@ export default makeStyles((theme) => ({
     width: "100%",
     margin: "45px 20px",
     padding: "0 20px",
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       margin: "130px 0 0 0",
     },
   },

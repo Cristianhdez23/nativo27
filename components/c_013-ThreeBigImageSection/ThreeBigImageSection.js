@@ -46,9 +46,9 @@ const ThreeBigImageSection = () => {
         <article
           className={`big-image ${classes.Image} ${classes.SecondImage}`}
         />
-        <article
-          className={`big-image ${classes.Image} ${classes.ThirdImage}`}
-        />
+        <article className={`big-image ${classes.Image} ${classes.ThirdImage}`}>
+          <div className={classes.imageBackdrop}></div>
+        </article>
       </section>
     </section>
   );

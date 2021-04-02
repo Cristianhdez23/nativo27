@@ -60,6 +60,14 @@ export default makeStyles((theme) => ({
       width: 150,
       height: 55,
     },
+    [theme.breakpoints.up("md")]: {
+      width: 150,
+      height: 42,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 150,
+      height: 55,
+    },
   },
   indicatorContainer: {
     zIndex: 2,
@@ -131,10 +139,15 @@ export default makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.up("sm")]: {
+      fontSize: rem(16),
+      marginLeft: 30,
+      marginBottom: 30,
+    },
+    [theme.breakpoints.up("lg")]: {
       fontSize: rem(21),
       marginLeft: 60,
       marginBottom: 60,
-    },
+    }
   },
   indicatorIconActive: {
     color: theme.palette.primary.white,
@@ -150,6 +163,16 @@ export default makeStyles((theme) => ({
     margin: "20px 20px 0 20px",
     padding: "35px 45px",
     position: "relative",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+      height: 220,
+      zIndex: 2,
+      position: "absolute",
+      bottom: 0,
+      right: 0,
+      margin: 0,
+      transform: "translateY(25%)",
+    },
     [theme.breakpoints.up("lg")]: {
       width: "50%",
       height: 220,

@@ -13,8 +13,12 @@ import { DIVIDER_DATA_ARQUITECTURA } from "../../jsonData/arquitectura/3-Divider
 import { TABS_SECTION } from "../../jsonData/arquitectura/4-TabsSectionData";
 // --||----||----|| JSON DATA ||----||----||-- //
 import styles from "../../styles/Home.module.css";
+import { useTheme } from "@material-ui/core/styles";
+import { useMediaQuery } from "@material-ui/core";
 
 const Arquitectura = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <main className={styles.container}>
       <Head>
@@ -23,7 +27,11 @@ const Arquitectura = () => {
       </Head>
 
       <ImageBanner
-        srcImage="/photos/arquitectura/1-Banner-Image.jpg"
+        srcImage={
+          isSmallScreen
+            ? "/photos/arquitectura/3.1-Carousel-Image.jpg"
+            : "/photos/arquitectura/1-Banner-Image.jpg"
+        }
         color="tertiary"
         data={BANNER_DATA}
       />

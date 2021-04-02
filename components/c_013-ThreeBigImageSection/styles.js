@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
-import { rem } from "../../constants/constants";
+import { rem, BACKDROP_ICON_BACKGROUND_HOVER } from "../../constants/constants";
 
 export default makeStyles((theme) => ({
   ThreeBigImageSection: {
@@ -75,7 +75,7 @@ export default makeStyles((theme) => ({
     fontWeight: "bold",
     display: "flex",
     flexDirection: "column",
-    fontSize: rem(24),
+    fontSize: rem(22),
     zIndex: 12,
     position: "absolute",
     width: "100%",
@@ -84,7 +84,7 @@ export default makeStyles((theme) => ({
     "& > a > span": {
       height: 22,
       fontWeight: 400,
-      fontSize: rem(19),
+      fontSize: rem(16),
     },
     [theme.breakpoints.down("md")]: {
       justifyContent: 'center',
@@ -93,9 +93,9 @@ export default makeStyles((theme) => ({
       width: "33%",
       top: "50%",
       height: 62,
-      fontSize: rem(35),
+      fontSize: rem(30),
       "& > a > span": {
-        fontSize: rem(26),
+        fontSize: rem(21),
       },
       "&:hover ~ section > article": {
         clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
@@ -103,9 +103,9 @@ export default makeStyles((theme) => ({
     },
   },
   firsText: {
-    letterSpacing: "7px",
+    letterSpacing: "4px",
     "& > a > span": {
-      letterSpacing: "3.5px",
+      letterSpacing: "2.5px",
     },
     [theme.breakpoints.up("md")]: {
       transform: "translateY(-50%)",
@@ -115,9 +115,9 @@ export default makeStyles((theme) => ({
     },
   },
   secondText: {
-    letterSpacing: "7px",
+    letterSpacing: "4px",
     "& > a > span": {
-      letterSpacing: "2px",
+      letterSpacing: "1.5px",
     },
     [theme.breakpoints.down("md")]: {
       top: "50%",
@@ -132,9 +132,9 @@ export default makeStyles((theme) => ({
     },
   },
   thridText: {
-    letterSpacing: "8px",
+    letterSpacing: "5px",
     "& > a > span": {
-      letterSpacing: "2.5px",
+      letterSpacing: "2.1px",
     },
     [theme.breakpoints.down("md")]: {
       bottom: 0,
@@ -154,5 +154,16 @@ export default makeStyles((theme) => ({
     flexDirection: 'column',
     color: theme.palette.primary.white,
     textDecoration: 'none',
+  },
+  imageBackdrop: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: BACKDROP_ICON_BACKGROUND_HOVER,
   },
 }));
