@@ -36,6 +36,9 @@ export default makeStyles((theme) => ({
         maxWidth: 450,
       },
       [theme.breakpoints.up("lg")]: {
+        maxWidth: 400,
+      },
+      "@media only screen and (min-width: 1350px)": {
         maxWidth: 470,
       },
     },
@@ -54,6 +57,9 @@ export default makeStyles((theme) => ({
         maxWidth: 450,
       },
       [theme.breakpoints.up("lg")]: {
+        maxWidth: 400,
+      },
+      "@media only screen and (min-width: 1350px)": {
         maxWidth: 470,
       },
     },
@@ -73,6 +79,9 @@ export default makeStyles((theme) => ({
     },
     [theme.breakpoints.up("lg")]: {
       height: 600,
+      maxWidth: 400,
+    },
+    "@media only screen and (min-width: 1350px)": {
       maxWidth: 470,
     },
   },
@@ -96,6 +105,9 @@ export default makeStyles((theme) => ({
       maxWidth: 450,
     },
     [theme.breakpoints.up("lg")]: {
+      maxWidth: 400,
+    },
+    "@media only screen and (min-width: 1350px)": {
       maxWidth: 470,
     },
   },
@@ -198,7 +210,10 @@ export default makeStyles((theme) => ({
       maxWidth: 450,
     },
     [theme.breakpoints.up("lg")]: {
-      maxWidth: 480,
+      maxWidth: 400,
+    },
+    "@media only screen and (min-width: 1350px)": {
+      maxWidth: 470,
     },
   },
   navButtons: {

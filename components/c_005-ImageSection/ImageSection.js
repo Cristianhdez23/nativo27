@@ -47,7 +47,7 @@ const ImageSection = ({ srcImage, isImageToRight, isImageToLeft, data }) => {
                 alt={SITE_TITLE}
               />
             </span>
-            {data?.map(({ title, description }, index) => {
+            {data?.map(({ title, description, secondaryTitle }, index) => {
               return (
                 <Typography
                   key={index}
@@ -55,11 +55,16 @@ const ImageSection = ({ srcImage, isImageToRight, isImageToLeft, data }) => {
                   component="p"
                   className={`${classes.paragraph} ${
                     isImageToRight ? classes.paragraphisImageToRight : ""
-                  }`}
+                  } ${secondaryTitle ? classes.secondaryTitle : ""}`}
                 >
                   {title && (
                     <span className={classes.paragraphTitle}>
                       {title}&nbsp;
+                    </span>
+                  )}
+                  {secondaryTitle && (
+                    <span className={classes.paragraphTitle}>
+                      {secondaryTitle}&nbsp;
                     </span>
                   )}
                   {description}

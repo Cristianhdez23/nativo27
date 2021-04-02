@@ -46,7 +46,7 @@ export default makeStyles((theme) => ({
       marginRight: 0,
       marginLeft: 30,
       "& > p": {
-        paddingLeft: '20%',
+        paddingLeft: "20%",
         "&:before": {
           height: "50%",
         },
@@ -90,13 +90,12 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.palette.background.main,
   },
   paragraph: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
     boxSizing: "border-box",
     position: "relative",
     color: theme.palette.text.light,
     paddingLeft: "12%",
-    letterSpacing: '2px',
     fontWeight: 400,
     lineHeight: "20px",
     "&:before": {
@@ -115,10 +114,30 @@ export default makeStyles((theme) => ({
     },
   },
   paragraphisImageToRight: {
-    display: 'block',
-    textAlign: 'left',
+    display: "block",
+    textAlign: "right",
+    [theme.breakpoints.down("lg")]: {
+      paddingLeft: 0,
+      paddingRight: "12%",
+    },
+    "&:before": {
+      height: 0,
+    },
+    "&:after": {
+      content: '""',
+      position: "absolute",
+      top: "50%",
+      right: 0,
+      transform: "translateY(-50%)",
+      width: 3,
+      height: "35%",
+      backgroundColor: theme.palette.primary.dark,
+    },
+  },
+  secondaryTitle: {
+    display: "block",
   },
   paragraphTitle: {
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
 }));
