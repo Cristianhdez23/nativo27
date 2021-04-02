@@ -73,7 +73,8 @@ export default makeStyles((theme) => ({
     marginLeft: 15,
     marginRight: 15,
     [theme.breakpoints.up("lg")]: {
-      marginLeft: "25%",
+      marginLeft: 0,
+      marginRight: "25%",
     },
   },
   TextField: {
@@ -116,8 +117,8 @@ export default makeStyles((theme) => ({
     width: 210,
     height: 210,
     [theme.breakpoints.up("lg")]: {
-      top: -120,
-      right: 50,
+      top: -110,
+      right: 120,
       width: 400,
       height: 400,
     },
