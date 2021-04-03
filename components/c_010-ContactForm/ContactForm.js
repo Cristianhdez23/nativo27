@@ -29,19 +29,19 @@ const ContactForm = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.formBlock}>
-          <form name="contact" method="POST" action="/?success=true" data-netlify="true">
+          <form name="contact" method="POST" action="/?success=true" data-netlify="true" data-netlify-recaptcha="true">
             <input type="hidden" name="form-name" value="contact" />
             <p>
-              <label htmlFor="nombre">Name</label>
+              <label htmlFor="nombre">nombre</label>
               <input type="text" id="nombre" name="nombre" />
             </p>
             <p>
-              <label htmlFor="telefono">Email</label>
+              <label htmlFor="telefono">telefono</label>
               <input type="text" id="telefono" name="telefono" />
             </p>
             <p>
-              <label htmlFor="email">Message</label>
-              <textarea id="email" name="email"></textarea>
+              <label htmlFor="email">email</label>
+              <input id="email" name="email"></input>
             </p>
             <p>
               <button type="submit">Send</button>
