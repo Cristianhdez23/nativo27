@@ -33,10 +33,9 @@ const ContactForm = () => {
             className={classes.form}
             autoComplete="off"
             name="contact-form"
-            method="post"
+            method="POST"
+            data-netlify-recaptcha="true"
             action="/"
-            // data-netlify="true"
-            // data-netlify-recaptcha="true"
           >
             <input type="hidden" name="form-name" value="contact-form" />
             <TextField

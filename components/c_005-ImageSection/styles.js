@@ -136,6 +136,11 @@ export default makeStyles((theme) => ({
       height: "35%",
       backgroundColor: theme.palette.primary.dark,
     },
+    [theme.breakpoints.up("lg")]: {
+      "&:after": {
+        height: 0,
+      }
+    },
   },
   secondaryTitle: {
     display: "block",
