@@ -29,7 +29,25 @@ const ContactForm = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.formBlock}>
-          <form
+          <form name="contact" method="POST" action="/?success=true" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <p>
+              <label htmlFor="nombre">Name</label>
+              <input type="text" id="nombre" name="nombre" />
+            </p>
+            <p>
+              <label htmlFor="telefono">Email</label>
+              <input type="text" id="telefono" name="telefono" />
+            </p>
+            <p>
+              <label htmlFor="email">Message</label>
+              <textarea id="email" name="email"></textarea>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+          </form>
+          {/* <form
             className={classes.form}
             autoComplete="off"
             name="contact"
@@ -112,7 +130,7 @@ const ContactForm = () => {
             >
               Enviar
             </Button>
-          </form>
+          </form> */}
         </Grid>
       </Grid>
     </section>
