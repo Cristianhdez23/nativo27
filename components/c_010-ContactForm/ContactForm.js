@@ -29,7 +29,7 @@ const ContactForm = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={5} className={classes.formBlock}>
-          <form name="contact" method="POST" action="/?success=true" data-netlify="true" data-netlify-recaptcha="true">
+          {/* <form name="contact" method="POST" action="/?success=true" data-netlify="true" data-netlify-recaptcha="true">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label htmlFor="nombre">nombre</label>
@@ -46,8 +46,8 @@ const ContactForm = () => {
             <p>
               <button type="submit">Send</button>
             </p>
-          </form>
-          {/* <form
+          </form> */}
+          <form
             className={classes.form}
             autoComplete="off"
             name="contact"
@@ -60,8 +60,8 @@ const ContactForm = () => {
               required
               fullWidth
               label="Nombre"
-              id="nombre"
-              name="nombre"
+              id="Nombre"
+              name="Nombre"
               variant="standard"
               type="text"
               className={classes.TextField}
@@ -81,8 +81,8 @@ const ContactForm = () => {
             <TextField
               fullWidth
               label="Teléfono"
-              id="telefono"
-              name="telefono"
+              id="Teléfono"
+              name="Teléfono"
               variant="standard"
               type="text"
               className={classes.TextField}
@@ -103,8 +103,8 @@ const ContactForm = () => {
               required
               fullWidth
               label="Email"
-              id="email"
-              name="email"
+              id="Email"
+              name="Email"
               variant="standard"
               type="email"
               className={classes.TextField}
@@ -130,7 +130,7 @@ const ContactForm = () => {
             >
               Enviar
             </Button>
-          </form> */}
+          </form>
         </Grid>
       </Grid>
     </section>
