@@ -119,6 +119,9 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("lg")]: {
       paddingLeft: 0,
       paddingRight: "12%",
+      "&:after": {
+        height: 0,
+      },
     },
     "&:before": {
       height: 0,
