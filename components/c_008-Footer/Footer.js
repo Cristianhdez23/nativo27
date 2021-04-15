@@ -33,14 +33,14 @@ const Footer = () => {
           >
             <FacebookIcon />
           </Link>
-          <Link
+          {/* <Link
             className={classes.iconClasses}
             href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
             <WhatsAppIcon />
-          </Link>
+          </Link> */}
           <Link
             className={classes.iconClasses}
             href="mailto:constructoresexpertossa@gmail.com?Subject=Nativo27"
