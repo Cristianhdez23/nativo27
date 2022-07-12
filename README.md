@@ -21,4 +21,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Check our Live version
 
-Check out our [Web Page for Nativo27]([https://expreso-moyano.netlify.app/](https://warm-kheer-1deabe.netlify.app/)).
+Check out our [Web Page for Nativo27](https://warm-kheer-1deabe.netlify.app/).
